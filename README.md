@@ -2,6 +2,20 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
 
+
+## Features
+- Dosha Quiz (Vata, Pitta, Kapha)
+- Remedies section
+- Herbs & Routine guidance
+- Clean UI with responsive design
+
+## Tech Stack
+- Angular
+- HTML, CSS, TypeScript
+
+## Live Demo
+https://stupendous-cupcake-e0c840.netlify.app
+
 ## Development server
 
 To start a local development server, run:

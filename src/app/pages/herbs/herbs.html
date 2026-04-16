@@ -1,0 +1,35 @@
+<div id="searchBar">
+  <div class="search-inner">
+    <div class="search-box">
+      <input type="text" placeholder="Search herbs by name or benefit..." (input)="onSearchChange($event)" />
+    </div>
+    <div class="filter-pills">
+      <button class="pill" [ngClass]="{'active': currentFilter === 'all'}" (click)="setFilter('all')">All</button>
+      <button class="pill" [ngClass]="{'active': currentFilter === 'adaptogen'}" (click)="setFilter('adaptogen')">Adaptogens</button>
+      <button class="pill" [ngClass]="{'active': currentFilter === 'digestion'}" (click)="setFilter('digestion')">Digestion</button>
+      </div>
+  </div>
+</div>
+
+<section id="herbsSection">
+  <div class="herbs-wrap">
+    <div class="herbs-grid">
+      <div *ngIf="filteredHerbs.length === 0" class="no-results" style="grid-column: 1/-1;">
+        <h3>🌿 No herbs found</h3>
+        <p>Try a different search or filter</p>
+      </div>
+      
+      <div class="herb-card" *ngFor="let h of filteredHerbs; let i = index" [style.animation-delay]="(i * 0.04) + 's'">
+        <div class="herb-header" [style.background]="h.bg">
+          <div class="herb-icon-wrap" style="background:rgba(255,255,255,0.6)">{{ h.icon }}</div>
+          <div class="herb-top">
+            <h3>{{ h.name }}</h3>
+            <div class="sanskrit">{{ h.sanskrit }}</div>
+            <div class="family">{{ h.family }}</div>
+          </div>
+        </div>
+        <div class="herb-body">{{ h.desc }}</div>
+        </div>
+    </div>
+  </div>
+</section>

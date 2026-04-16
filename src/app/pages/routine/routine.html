@@ -1,0 +1,25 @@
+<section id="timeline">
+  <div class="timeline-wrap">
+    <h2>Your Complete Day</h2>
+    
+    <div class="phase-tabs">
+      <button class="ptab morning" [ngClass]="{'active': activePhase === 'morning'}" (click)="setPhase('morning')">🌅 Morning</button>
+      <button class="ptab day" [ngClass]="{'active': activePhase === 'day'}" (click)="setPhase('day')">☀️ Daytime</button>
+      <button class="ptab evening" [ngClass]="{'active': activePhase === 'evening'}" (click)="setPhase('evening')">🌙 Evening</button>
+    </div>
+
+    <div class="tl">
+      <div class="tl-item" *ngFor="let item of phases[activePhase]">
+        <div class="tl-time"><span>{{ item.time }}</span><small>AM/PM</small></div>
+        <div class="tl-dot" [style.background]="item.dot"></div>
+        <div class="tl-card" [style.border-left-color]="item.dot">
+          <div class="practice-tag">{{ item.tag }}</div>
+          <h4>{{ item.icon }} {{ item.title }}</h4>
+          <p>{{ item.desc }}</p>
+          <div class="benefit">✦ {{ item.benefit }}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

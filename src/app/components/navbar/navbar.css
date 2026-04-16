@@ -1,0 +1,87 @@
+    :root {
+      --forest:    #1E3A1A;
+      --moss:      #2D5A27;
+      --sage:      #6B8F47;
+      --fern:      #A3B87A;
+      --mint:      #D7E9C0;
+      --cream:     #F6EDD9;
+      --parchment: #EFE3C6;
+      --sand:      #D9C49A;
+      --clay:      #B5723A;
+      --terracotta:#C4622D;
+      --turmeric:  #D4930F;
+      --copper:    #A0522D;
+      --bark:      #5C3317;
+      --charcoal:  #2A2A2A;
+      --white:     #FFFDF7;
+
+      --font-display: 'Playfair Display', serif;
+      --font-body:    'Cormorant Garamond', serif;
+      --font-ui:      'Nunito Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+    /* ─── Scrollbar ─── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--mint); }
+    ::-webkit-scrollbar-thumb { background: var(--sage); border-radius: 3px; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 3rem;
+      background: rgba(30, 58, 26, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(163,184,122,0.2);
+      transition: all 0.3s ease;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.75rem;
+      text-decoration: none;
+    }
+    .nav-logo .leaf-icon {
+      width: 38px; height: 38px;
+      background: var(--turmeric);
+      border-radius: 50% 0 50% 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      transform: rotate(-15deg);
+    }
+    .nav-logo span {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--cream);
+      letter-spacing: 0.05em;
+    }
+    .nav-logo span em { color: var(--turmeric); font-style: normal; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: var(--font-ui);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mint);
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .nav-links a:hover { color: var(--turmeric); }
+    .nav-cta {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.5rem 1.4rem;
+      background: var(--turmeric);
+      color: var(--forest);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav-cta:hover { background: var(--fern); transform: translateY(-1px); }

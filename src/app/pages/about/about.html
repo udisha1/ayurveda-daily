@@ -1,0 +1,20 @@
+<section id="faq">
+  <div class="faq-wrap">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div id="faqList">
+      <div class="faq-item" *ngFor="let faq of faqs; let i = index" [ngClass]="{'open': faq.isOpen}">
+        
+        <div class="faq-q" (click)="toggleFaq(i)">
+          <h4>{{ faq.q }}</h4>
+          <div class="faq-icon">+</div>
+        </div>
+        
+        <div class="faq-a" [style.max-height]="faq.isOpen ? '500px' : '0'">
+          <p>{{ faq.a }}</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

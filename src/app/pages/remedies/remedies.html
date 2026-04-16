@@ -1,0 +1,90 @@
+<div id="filterBar">
+  <div class="filter-inner">
+    <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'all'}" 
+            (click)="setFilter('all')">
+      All Remedies
+    </button>
+
+    <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'digestion'}" 
+            (click)="setFilter('digestion')">
+      🌿 Digestion
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'stress'}" 
+            (click)="setFilter('stress')">🧘 Stress & Anxiety
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'immunity'}" 
+            (click)="setFilter('immunity')">🛡️ Immunity
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'skin'}" 
+            (click)="setFilter('skin')">✨ Skin
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'sleep'}" 
+            (click)="setFilter('sleep')">🌙 Sleep
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'hair'}" 
+            (click)="setFilter('hair')">💆 Hair
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'joints'}" 
+            (click)="setFilter('joints')">🦴 Joints
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'energy'}" 
+            (click)="setFilter('energy')">⚡ Energy
+    </button>
+    
+    </div>
+</div>
+
+<section id="remediesSection">
+  <div class="remedies-wrap">
+    
+    <div class="grid">
+      
+      <div *ngIf="filteredRemedies.length === 0" class="no-results">
+        <h3>No remedies found</h3>
+        <p>Try a different category filter</p>
+      </div>
+
+      <div class="card" *ngFor="let r of filteredRemedies; let i = index" [style.animation-delay]="(i * 0.05) + 's'">
+        <div class="card-banner" [style.background]="r.banner"></div>
+        <div class="card-head">
+          <div class="card-icon" [style.background]="r.bg">{{ r.icon }}</div>
+          <div class="card-meta">
+            <div class="card-cat" [style.color]="r.banner">{{ r.cat_label }}</div>
+            <h4>{{ r.title }}</h4>
+          </div>
+        </div>
+        
+        <div class="card-body">{{ r.desc }}</div>
+        
+        <div class="steps-block">
+          <h5>How to Prepare</h5>
+          <div class="step" *ngFor="let step of r.steps; let stepIndex = index">
+            <div class="sn">{{ stepIndex + 1 }}</div>
+            <span>{{ step }}</span>
+          </div>
+        </div>
+
+        <div class="card-foot">
+          <div class="eff">
+            <span class="eff-lbl">Efficacy</span>
+            <div class="dots">
+              <div class="dot" *ngFor="let n of [1,2,3,4,5]" [ngClass]="{'on': n <= r.efficacy}"></div>
+            </div>
+          </div>
+          <span class="tbadge">⏱ {{ r.time }}</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

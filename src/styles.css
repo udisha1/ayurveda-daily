@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
+:root {
+  --forest: #1E3A1A; --moss: #2D5A27; --sage: #6B8F47; --fern: #A3B87A;
+  --mint: #D7E9C0; --cream: #F6EDD9; --parchment: #EFE3C6; --sand: #D9C49A;
+  --clay: #B5723A; --terracotta: #C4622D; --turmeric: #D4930F; --copper: #A0522D;
+  --bark: #5C3317; --charcoal: #2A2A2A; --white: #FFFDF7;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Cormorant Garamond', serif;
+  --font-ui: 'Nunito Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--forest);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--mint); }
+::-webkit-scrollbar-thumb { background: var(--sage); border-radius: 3px; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Common Breadcrumb & Hero utilities can go here too */

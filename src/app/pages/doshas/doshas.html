@@ -1,0 +1,55 @@
+<div class="page-hero">
+  <div class="hero-mandala"></div>
+  <div class="breadcrumb">
+    <a href="ayurveda-health.html">Home</a> › Doshas
+  </div>
+  <div class="hero-content">
+    <div class="hero-tag">Prakriti — Your Nature</div>
+    <h1 class="hero-title">Discover Your<br><em>Dosha Type</em></h1>
+    <p class="hero-desc">Take our 10-question quiz rooted in Ayurvedic principles to uncover your unique mind-body constitution.</p>
+  </div>
+</div>
+<section id="quiz" *ngIf="!quizComplete">
+  <div class="quiz-wrap">
+    <div class="progress-bar">
+      <div class="progress-fill" [style.width]="progressPercentage + '%'"></div>
+    </div>
+    
+    <div class="question-block">
+      <div class="q-number">Question {{ current + 1 }} of {{ questions.length }}</div>
+      <div class="q-text">{{ questions[current].q }}</div>
+      
+      <div class="q-options">
+        <div class="q-option" 
+             *ngFor="let opt of questions[current].opts; let i = index"
+             [ngClass]="{'selected': answers[current] === opt.d}" 
+             (click)="selectAnswer(opt.d)">
+          <div class="opt-letter">{{ i === 0 ? 'A' : i === 1 ? 'B' : 'C' }}</div>
+          <span>{{ opt.t }}</span>
+        </div>
+      </div>
+      
+      <div class="quiz-nav">
+        <button class="btn-prev" (click)="prev()" [style.visibility]="current === 0 ? 'hidden' : 'visible'">← Back</button>
+        <button class="btn-next" (click)="next()" [disabled]="!answers[current]">
+          {{ current === questions.length - 1 ? 'See My Result 🌿' : 'Next →' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="result" *ngIf="quizComplete">
+  <div class="result-wrap">
+    <div class="result-badge" [style.background]="primaryDosha.bg" [style.color]="primaryDosha.color">
+      {{ primaryDosha.icon }} {{ primaryDosha.name }} Dominant
+    </div>
+    <h2 class="result-title" [style.color]="primaryDosha.color">You are a {{ primaryDosha.name }} Type</h2>
+    <p class="result-subtitle">{{ primaryDosha.element }} · {{ primaryDosha.desc }}</p>
+    
+    <div class="result-actions">
+      <a routerLink="/remedies" class="btn-primary">View {{ primaryDosha.name }} Remedies →</a>
+      <button class="retake-btn" (click)="retake()">Retake Quiz</button>
+    </div>
+  </div>
+</section>

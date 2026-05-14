@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectorRef, ViewChild, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http'; 
 
 @Component({
   selector: 'app-chatbot',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule],  
   templateUrl: './chatbot.html',
   styleUrl: './chatbot.css',
 })
@@ -26,10 +26,22 @@ export class Chatbot {
     'Foods for better digestion?',
   ];
 
-  constructor(private http: HttpClient) {}
+  @ViewChild('scrollMe') private scrollContainer!: ElementRef;
+
+  constructor(private http: HttpClient, private cdr: ChangeDetectorRef) {}
+
+  private scrollToBottom() {
+    setTimeout(() => {
+      try {
+        this.scrollContainer.nativeElement.scrollTop =
+          this.scrollContainer.nativeElement.scrollHeight;
+      } catch (e) {}
+    }, 50);
+  }
 
   toggleChat() {
     this.isOpen = !this.isOpen;
+    setTimeout(() => this.scrollToBottom(), 100);
   }
 
   ask(question: string) {
@@ -40,28 +52,33 @@ export class Chatbot {
 
   send() {
     const text = this.userInput.trim();
-    if (!text || this.loading) return; // ✅ guard at the TOP
+    if (!text || this.loading) return;
 
-    this.messages.push({ role: 'user', text });
+    this.messages = [...this.messages, { role: 'user', text }];
     this.history.push({ role: 'user', content: text });
     this.userInput = '';
     this.loading = true;
+    this.cdr.detectChanges();
+    this.scrollToBottom();
 
-    const snapshot = this.history.map(m => ({ ...m })); // ✅ snapshot before async
+    const snapshot = this.history.map(m => ({ ...m }));
 
     this.http.post<any>('http://localhost:3000/chat', { messages: snapshot }).subscribe({
       next: (res) => {
         const reply = res.content[0].text;
-        this.messages.push({ role: 'bot', text: reply });
+        this.messages = [...this.messages, { role: 'bot', text: reply }];
         this.history.push({ role: 'assistant', content: reply });
         this.loading = false;
+        this.cdr.detectChanges();
+        this.scrollToBottom();
       },
       error: () => {
-        this.messages.push({ role: 'bot', text: 'Sorry, something went wrong. Please try again!' });
-        this.history.pop(); // ✅ clean up failed message from history
+        this.messages = [...this.messages, { role: 'bot', text: 'Sorry, something went wrong!' }];
+        this.history.pop();
         this.loading = false;
+        this.cdr.detectChanges();
+        this.scrollToBottom();
       },
     });
-    // ✅ NOTHING after this — no extra code below the subscribe
   }
 }

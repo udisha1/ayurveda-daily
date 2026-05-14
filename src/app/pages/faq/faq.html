@@ -1,0 +1,23 @@
+<section class="faq-page">
+  <div class="faq-hero">
+    <h1>Frequently Asked <span><i>Questions</i></span></h1>
+    <p>Everything you need to know about Ayurveda, herbs, and holistic wellness.</p>
+  </div>
+
+  <div class="faq-container">
+    <div class="faq-item" *ngFor="let item of faqs; let i = index">
+      <button class="faq-question" (click)="toggle(i)">
+        {{ item.question }}
+        <span class="faq-icon">{{ item.open ? '−' : '+' }}</span>
+      </button>
+      <div class="faq-answer" *ngIf="item.open">
+        {{ item.answer }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" *ngIf="showBtn" (click)="scrollToTop()" >
+    <b>↑</b>
+  </button>
+</section>

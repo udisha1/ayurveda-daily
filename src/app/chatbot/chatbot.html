@@ -1,0 +1,28 @@
+<div class="chat-fab" (click)="toggleChat()">💬</div>
+
+<div class="chat-window" *ngIf="isOpen">
+  <div class="chat-header">
+    <span><span class="chatbot-leaf">🌿</span>AyurVeda Assistant</span>
+    <button (click)="toggleChat()">✕</button>
+  </div>
+
+  <div class="chat-messages" #scrollMe>
+    <div *ngFor="let msg of messages" [ngClass]="['msg', msg.role]">
+      {{ msg.text }}
+    </div>
+    <div class="msg bot typing" *ngIf="loading">Thinking...</div>
+  </div>
+
+  <div class="chat-suggestions">
+    <button *ngFor="let q of suggestions" (click)="ask(q)">{{ q }}</button>
+  </div>
+
+  <div class="chat-input">
+    <input
+      [(ngModel)]="userInput"
+      (keydown.enter)="send()"
+      placeholder="Ask about herbs, remedies..."
+    />
+    <button (click)="send()">Send</button>
+  </div>
+</div>

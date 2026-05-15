@@ -87,7 +87,7 @@
     .btn-next:disabled{opacity:0.4;cursor:not-allowed;transform:none;}
 
     /* RESULT */
-    #result{display:none;padding:4rem 3rem 6rem;background:var(--white);}
+    #result{padding:4rem 3rem 6rem;background:var(--white);}
     .result-wrap{max-width:760px;margin:0 auto;text-align:center;}
     .result-badge{
       display:inline-flex;align-items:center;gap:0.75rem;

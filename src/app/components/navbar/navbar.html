@@ -1,4 +1,4 @@
-<nav [ngStyle]="{'padding': isScrolled ? '0.6rem 3rem' : '1rem 3rem'}">
+<nav [class.sticky]="isScrolled">
   <a class="nav-logo" routerLink="/">
     <div class="leaf-icon">🌿</div>
     <span>Ayur<em>Veda</em> Daily</span>

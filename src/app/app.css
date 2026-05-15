@@ -1,0 +1,11 @@
+.page-content {
+  padding-top: 96px;
+  transition: padding-top 0.3s ease;
+  min-height: calc(100vh - 96px);
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding-top: 112px;
+  }
+}

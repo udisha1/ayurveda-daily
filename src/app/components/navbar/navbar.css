@@ -39,8 +39,15 @@
       transition: all 0.3s ease;
     }
     .nav-logo {
-      display: flex; align-items: center; gap: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
       text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .nav-logo:hover {
+      transform: scale(1.03);
     }
     .nav-logo .leaf-icon {
       width: 38px; height: 38px;

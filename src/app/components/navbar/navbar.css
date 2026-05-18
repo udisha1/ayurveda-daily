@@ -85,3 +85,40 @@
       transition: background 0.2s, transform 0.15s;
     }
     .nav-cta:hover { background: var(--fern); transform: translateY(-1px); }
+    .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--mint);
+    cursor: pointer;
+}
+    @media (max-width: 768px) {
+
+   nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .nav-links {
+    display: none; 
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: rgba(30, 58, 26, 0.98);
+    width: 200px;
+    padding: 1rem;
+    gap: 1rem;
+    border-left: 1px solid rgba(163,184,122,0.2);
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}

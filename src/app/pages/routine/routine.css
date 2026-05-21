@@ -57,7 +57,7 @@
     .tl{position:relative;}
     .tl::before{content:'';position:absolute;left:110px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--turmeric) 0%,var(--sage) 50%,var(--bark) 100%);}
     .tl-item{display:grid;grid-template-columns:110px 1fr;gap:2rem;margin-bottom:2rem;position:relative;}
-    .tl-time{text-align:right;padding-top:0.3rem;}
+    .tl-time{text-align:right;padding-top:0.3rem;padding-right: 1rem;}
     .tl-time span{font-family:var(--font-display);font-size:0.9rem;font-weight:600;color:var(--clay);}
     .tl-time small{display:block;font-family:var(--font-ui);font-size:0.65rem;color:var(--sage);letter-spacing:0.06em;}
     .tl-dot{position:absolute;left:101px;top:0.4rem;width:18px;height:18px;border-radius:50%;border:3px solid var(--parchment);}

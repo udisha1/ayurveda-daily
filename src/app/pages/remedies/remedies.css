@@ -81,3 +81,168 @@
     .footer-copy{width:100%;text-align:center;font-family:var(--font-ui);font-size:0.75rem;color:rgba(217,196,154,0.5);margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(217,196,154,0.15);}
     @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
     @media(max-width:768px){nav{padding:0.75rem 1.5rem;}.nav-links,.nav-cta{display:none;}.page-hero,#filterBar,#remediesSection,footer{padding-left:1.5rem;padding-right:1.5rem;}#filterBar{top:56px;}.grid{grid-template-columns:1fr;}}
+  
+  
+/* SHARE SECTION */
+
+.share-section{
+    width:auto;
+
+    padding:0 1.4rem 1.4rem;
+    margin-top:0.6rem;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:2.5rem;
+
+    align-items:center;
+    justify-content:center;
+}
+
+.share-section::before{
+    content:'Share Remedy';
+    width:100%;
+    font-family:var(--font-ui);
+    font-size:0.64rem;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:rgba(45,90,39,0.55);
+    margin-bottom:0.2rem;
+}
+
+.share-btn{
+    border:none;
+    cursor:pointer;
+
+    padding:0.5rem 1rem;
+    border-radius:999px;
+
+    font-family:var(--font-ui);
+    font-size:0.66rem;
+    font-weight:700;
+    letter-spacing:0.04em;
+
+    transition:all 0.22s ease;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:1rem;
+
+    background:var(--mint);
+    color:var(--forest);
+}
+
+/* COLORS */
+
+.share-btn.whatsapp{
+    background:#e3f5e7;
+    color:#237245;
+}
+
+.share-btn.twitter{
+    background:#edf1f4;
+    color:#1f2937;
+}
+
+.share-btn.native{
+    background:#e8f0d8;
+    color:#2d5a27;
+}
+
+/* HOVER */
+
+.share-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 6px 14px rgba(0,0,0,0.08);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .share-section{
+        padding-top:0.3rem;
+    }
+
+    .share-btn{
+        font-size:0.64rem;
+    }
+}
+/* BUTTON THEMES */
+
+.share-btn.whatsapp{
+    background:#dff5e7;
+    color:#1f7a45;
+}
+
+.share-btn.twitter{
+    background:#edf1f5;
+    color:#1d2a38;
+}
+
+
+.share-btn.native{
+    background:#e6f0d4;
+    color:#2d5a27;
+}
+
+/* HOVER EFFECT */
+
+.share-btn:hover{
+    transform:translateY(-3px) scale(1.03);
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+/* ACTIVE EFFECT */
+
+.share-btn:active{
+    transform:scale(0.96);
+}
+
+/* TOAST */
+
+.copy-toast{
+    position:fixed;
+    bottom:24px;
+    right:24px;
+
+    background:var(--forest);
+    color:var(--cream);
+
+    padding:1rem 1.3rem;
+    border-radius:14px;
+
+    font-family:var(--font-ui);
+    font-size:0.82rem;
+    font-weight:600;
+
+    box-shadow:0 12px 28px rgba(0,0,0,0.18);
+
+    z-index:999;
+    animation:fadeUp 0.35s ease;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .share-section{
+        padding-top:1.5rem;
+    }
+
+    .share-btn{
+        flex:1 1 calc(50% - 0.7rem);
+        min-width:unset;
+    }
+
+    .copy-toast{
+        left:16px;
+        right:16px;
+        bottom:16px;
+        text-align:center;
+    }
+}

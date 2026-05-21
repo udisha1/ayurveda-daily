@@ -11,4 +11,9 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
   isScrolled = false;
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }

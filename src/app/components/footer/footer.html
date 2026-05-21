@@ -1,17 +1,72 @@
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">Ayur<em>Veda</em> Daily</div>
+<footer class="site-footer" aria-labelledby="site-footer-title">
+  <div class="site-footer__inner">
+    <section class="site-footer__section" aria-labelledby="site-footer-title">
+      <h2 class="site-footer__brand" id="site-footer-title">Ayurveda Daily</h2>
+      <p class="site-footer__description">
+        A calm corner for daily rituals, thoughtful recipes, and accessible Ayurveda guidance for
+        modern life.
+      </p>
+      <p class="site-footer__address">Crafted for curious readers everywhere.</p>
 
-    <div class="footer-links">
-      <a routerLink="/about">About</a>
-      <a routerLink="/remedies">Remedies</a>
-      <a routerLink="/herbs">Herbs</a>
-      <a routerLink="/doshas">Doshas</a>
-      <a routerLink="/contact">Contact</a>
-    </div>
+      <div class="site-footer__social" aria-label="Social media links">
+        <a
+          class="site-footer__social-link"
+          *ngFor="let link of socialLinks"
+          [href]="link.href"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="link.label"
+        >
+          <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+            <path [attr.d]="link.iconPath"></path>
+          </svg>
+          <span class="site-footer__sr-only">{{ link.label }}</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="site-footer__section" aria-labelledby="site-footer-quick-links">
+      <h3 class="site-footer__heading" id="site-footer-quick-links">Quick Links</h3>
+
+      <ul class="site-footer__list">
+        <li *ngFor="let link of quickLinks">
+          <a class="site-footer__link" [routerLink]="link.path">{{ link.label }}</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="site-footer__section" aria-labelledby="site-footer-resources">
+      <h3 class="site-footer__heading" id="site-footer-resources">Resources</h3>
+
+      <ul class="site-footer__list">
+        <li *ngFor="let link of resourceLinks">
+          <a class="site-footer__link" [routerLink]="link.path">{{ link.label }}</a>
+        </li>
+      </ul>
+    </section>
+
+    <section
+      class="site-footer__section site-footer__section--newsletter"
+      aria-labelledby="site-footer-newsletter"
+    >
+      <h3 class="site-footer__heading" id="site-footer-newsletter">Newsletter</h3>
+
+      <app-newsletter-subscription
+        title="Stay grounded with weekly updates"
+        description="Subscribe for practical Ayurveda guidance, seasonal recipes, and thoughtful wellness notes."
+        placeholder="you@example.com"
+        buttonLabel="Join now"
+        successMessage="Subscription confirmed. Watch your inbox for the next issue."
+        errorMessage="We could not subscribe you right now. Please try again shortly."
+        theme="dark"
+      ></app-newsletter-subscription>
+    </section>
   </div>
 
-  <div class="footer-copy">
-    © {{year}} AyurVeda Daily — Ancient Healing for the Modern World. Not a substitute for medical advice.
+  <div class="site-footer__bottom">
+    <p class="site-footer__copyright">
+      Copyright {{ year }} Ayurveda Daily. Ancient healing for the modern world. Not a substitute
+      for medical advice.
+    </p>
   </div>
 </footer>

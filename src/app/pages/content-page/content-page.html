@@ -1,0 +1,32 @@
+<section class="content-page">
+  <div class="content-page__hero">
+    <p class="content-page__eyebrow">{{ pageData.eyebrow }}</p>
+    <h1 class="content-page__title">{{ pageData.title }}</h1>
+    <p class="content-page__description">{{ pageData.description }}</p>
+
+    <a
+      *ngIf="pageData.ctaLabel && pageData.ctaLink && !pageData.ctaExternal"
+      class="content-page__cta"
+      [routerLink]="pageData.ctaLink"
+    >
+      {{ pageData.ctaLabel }}
+    </a>
+
+    <a
+      *ngIf="pageData.ctaLabel && pageData.ctaLink && pageData.ctaExternal"
+      class="content-page__cta"
+      [href]="pageData.ctaLink"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {{ pageData.ctaLabel }}
+    </a>
+  </div>
+
+  <div class="content-page__grid" *ngIf="pageData.cards.length">
+    <article class="content-page__card" *ngFor="let card of pageData.cards">
+      <h2 class="content-page__card-title">{{ card.title }}</h2>
+      <p class="content-page__card-body">{{ card.body }}</p>
+    </article>
+  </div>
+</section>

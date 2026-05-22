@@ -26,7 +26,6 @@ footer {
       border-top: 1px solid rgba(217,196,154,0.15);
     }
 
-    /* ─── Keyframes ─── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(28px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -36,7 +35,6 @@ footer {
       50%       { transform: translateX(-50%) translateY(6px); }
     }
 
-    /* ─── Responsive ─── */
     @media (max-width: 768px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links, .nav-cta { display: none; }
@@ -44,4 +42,7 @@ footer {
       .timeline::before { left: 70px; }
       .timeline-item { grid-template-columns: 70px 1fr; }
       .timeline-dot { left: 61px; }
+
     }
+
+

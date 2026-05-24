@@ -158,18 +158,41 @@
     }
     .nl-box .section-title { font-size: 2.2rem; }
     .nl-box p { color: #5a6e50; margin: 1rem 0 2rem; }
-    .nl-form { display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center; }
-    .nl-input {
-      flex: 1; min-width: 220px;
-      padding: 0.85rem 1.4rem;
-      border: 1.5px solid var(--sand);
-      border-radius: 50px;
-      background: var(--white);
-      font-family: var(--font-ui); font-size: 0.9rem; color: var(--forest);
-      outline: none; transition: border-color 0.2s;
-    }
-    .nl-input:focus { border-color: var(--sage); }
-    .nl-input::placeholder { color: #a09070; }
+    .nl-form {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nl-input {
+  flex: 1;
+  min-width: 240px;
+  padding: 0.95rem 1.4rem;
+  border: 1.5px solid var(--sand);
+  border-radius: 50px;
+  background: var(--white);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--forest);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.nl-input:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 4px rgba(107, 143, 71, 0.15);
+}
+
+.nl-input::placeholder {
+  color: #a09070;
+}
+
+.nl-form .btn-primary {
+  min-width: 140px;
+}
+
 
     /* ─── FOOTER ─── */
     footer {
@@ -218,4 +241,12 @@
       .timeline::before { left: 70px; }
       .timeline-item { grid-template-columns: 70px 1fr; }
       .timeline-dot { left: 61px; }
+      .nl-form {
+  flex-direction: column;
+}
+
+.nl-input,
+.nl-form .btn-primary {
+  width: 100%;
+}
     }

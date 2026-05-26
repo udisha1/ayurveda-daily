@@ -57,7 +57,7 @@
     .dots{display:flex;gap:3px;}
     .dot{width:7px;height:7px;border-radius:50%;background:var(--mint);}
     .dot.on{background:var(--turmeric);}
-    .tbadge{font-family:var(--font-ui);font-size:0.7rem;font-weight:600;padding:0.2rem 0.75rem;border-radius:50px;background:var(--mint);color:var(--moss);}
+    .tbadge{font-family:var(--font-ui);font-size:0.7rem;font-weight:600;padding:0.2rem 0.75rem;border-radius:50px;background:var(--clay);color:var(--moss);}
     .dosha-tags{padding:0 1.8rem 1rem;display:flex;gap:0.4rem;flex-wrap:wrap;}
     .dtag{font-family:var(--font-ui);font-size:0.62rem;font-weight:700;padding:0.15rem 0.55rem;border-radius:50px;border:1px solid;}
     .dtag.V{color:#2d5a27;border-color:rgba(45,90,39,0.3);background:rgba(107,143,71,0.1);}
@@ -108,7 +108,7 @@
     font-weight:700;
     letter-spacing:0.08em;
     text-transform:uppercase;
-    color:rgba(45,90,39,0.55);
+    color:var(--clay);
     margin-bottom:0.2rem;
 }
 

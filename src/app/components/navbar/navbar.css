@@ -86,3 +86,25 @@
       text-decoration: none;
     }
     .nav-cta:hover { background: var(--fern); transform: translateY(-1px);}
+
+    .theme-toggle {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2) rotate(15deg);
+  filter: drop-shadow(0 0 8px var(--turmeric));
+}
+
+/* Keep the moon/sun color consistent with the logo text */
+.theme-toggle {
+  color: var(--cream);
+}
+
+body.dark-mode .theme-toggle {
+  color: var(--turmeric);
+}

@@ -10,5 +10,12 @@
     <li><a routerLink="/routine" routerLinkActive="active">Routine</a></li>
     <li><a routerLink="/about" routerLinkActive="active">About</a></li>
   </ul>
+
+  <div style="display: flex; align-items: center; gap: 1.5rem;">
+    <div class="theme-toggle" (click)="toggleTheme()" role="button" aria-label="Toggle Theme" style="cursor: pointer; font-size: 1.4rem;">
+      {{ isDarkMode ? '☀️' : '🌙' }}
+    </div>
+
   <a class="nav-cta" routerLink="/">Home</a>
+  </div>
 </nav>

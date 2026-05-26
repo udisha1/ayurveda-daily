@@ -32,3 +32,133 @@ body {
 }
 
 /* Common Breadcrumb & Hero utilities can go here too */
+
+/* ================= DARK MODE ================= */
+
+body.dark-mode {
+  background: #1f2d23 !important;
+  color: #f5f1e8 !important;
+  transition: all 0.3s ease;
+}
+
+/* 1. GLOBAL SECTIONS & CONTAINERS */
+body.dark-mode section, 
+body.dark-mode main, 
+body.dark-mode #quiz,
+body.dark-mode #result,
+body.dark-mode #profiles,
+body.dark-mode #about-ayurveda,
+body.dark-mode #faq,
+body.dark-mode #medical-disclaimer,
+body.dark-mode #searchBar,
+body.dark-mode #herbsSection,
+body.dark-mode #remediesSection,
+body.dark-mode #filterBar {
+  background: #1f2d23 !important;
+}
+
+/* 2. CARD & COMPONENT BOXES */
+body.dark-mode .card,
+body.dark-mode .herb-card,
+body.dark-mode .remedy-card,
+body.dark-mode .disclaimer-box,
+body.dark-mode .q-option,
+body.dark-mode .result-box,
+body.dark-mode .profile-body,
+body.dark-mode .detail-block ,
+body.dark-mode .t1-card,
+body.dark-mode .t2-card{
+  background: #2b3d31 !important;
+  border: 1px solid #4d6b55 !important;
+  color: #fff8ea !important;
+}
+
+/* 3. HEADINGS (Gold/Turmeric) */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4,
+body.dark-mode .about-title,
+body.dark-mode .faq-q h4,
+body.dark-mode .q-text,
+body.dark-mode .herb-top h3,
+body.dark-mode .card-meta h4,
+body.dark-mode .result-title,
+body.dark-mode .profile-name,
+body.dark-mode .disclaimer-text strong {
+  color: #e0b84f !important;
+}
+
+/* 4. BODY TEXT (Cream/Parchment) */
+body.dark-mode p, 
+body.dark-mode li, 
+body.dark-mode .about-text,
+body.dark-mode .faq-a p,
+body.dark-mode .herb-body,
+body.dark-mode .card-body,
+body.dark-mode .step,
+body.dark-mode .disclaimer-text,
+body.dark-mode .profile-desc,
+body.dark-mode .detail-block p {
+  color: #e4dccb !important;
+}
+
+/* 5. INTERACTIVE ELEMENTS (Buttons & Pills) */
+body.dark-mode .pill,
+body.dark-mode .tab,
+body.dark-mode .faq-icon,
+body.dark-mode .search-box input {
+  background: #32473a !important;
+  color: #f5f1e8 !important;
+  border: 1px solid #6b8f71 !important;
+}
+
+body.dark-mode .pill.active, 
+body.dark-mode .tab.active,
+body.dark-mode .pill:hover,
+body.dark-mode .tab:hover {
+  background: #d4930f !important;
+  color: #1e3a1a !important;
+  border-color: #d4930f !important;
+}
+
+/* 6. DOSHA SPECIFIC TAGS */
+body.dark-mode .dtag.V { background: rgba(163, 184, 122, 0.2); color: #a3c981; border-color: #a3c981; }
+body.dark-mode .dtag.P { background: rgba(212, 147, 15, 0.2); color: #ffcc66; border-color: #ffcc66; }
+body.dark-mode .dtag.K { background: rgba(70, 130, 140, 0.2); color: #7ecacc; border-color: #7ecacc; }
+
+/* 7. SHARE SECTION & TOAST */
+body.dark-mode .share-btn {
+  background: #3a5241 !important;
+  color: #ffcc66 !important;
+}
+body.dark-mode .share-btn.whatsapp { background: #1e3a24 !important; color: #4ade80 !important; }
+body.dark-mode .share-btn.twitter { background: #1c2a33 !important; color: #7dd3fc !important; }
+
+body.dark-mode .copy-toast {
+  background: #e0b84f !important;
+  color: #1f2d23 !important;
+}
+
+/* 8. QUIZ SELECTION */
+body.dark-mode .q-option.selected {
+  background: #3a5241 !important;
+  border-color: #e0b84f !important;
+}
+body.dark-mode .opt-letter {
+  background: #1f2d23 !important;
+  color: #e0b84f !important;
+}
+
+
+
+body.dark-mode .tl-card {
+    background: #2b3d31 !important; 
+    border: 1px solid #4d6b55 !important;
+    color: #f5f1e8 !important;
+}
+
+body.dark-mode .tl-card h3,
+body.dark-mode .tl-card p {
+    color: #f5f1e8 !important;
+}

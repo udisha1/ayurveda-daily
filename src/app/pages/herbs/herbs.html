@@ -1,13 +1,33 @@
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a> / Herbs
+  </div>
+  <div class="hero-deco"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🌿 Ayurvedic Herbs</div>
+    <h1 class="hero-title">
+      Nature's <em>Healing Pharmacy</em>
+    </h1>
+    <p class="hero-desc">
+      Discover the ancient wisdom of Ayurvedic herbs — each plant a gift from nature, carefully selected for your
+      well-being.
+    </p>
+  </div>
+</div>
+
 <div id="searchBar">
   <div class="search-inner">
     <div class="search-box">
-      <input type="text" placeholder="Search herbs by name or benefit..." (input)="onSearchChange($event)" />
+      <input type="text" placeholder="Search herbs by name or benefit..." [(ngModel)]="currentSearch"
+        (ngModelChange)="onSearchChange()" />
     </div>
     <div class="filter-pills">
       <button class="pill" [ngClass]="{'active': currentFilter === 'all'}" (click)="setFilter('all')">All</button>
-      <button class="pill" [ngClass]="{'active': currentFilter === 'adaptogen'}" (click)="setFilter('adaptogen')">Adaptogens</button>
-      <button class="pill" [ngClass]="{'active': currentFilter === 'digestion'}" (click)="setFilter('digestion')">Digestion</button>
-      </div>
+      <button class="pill" [ngClass]="{'active': currentFilter === 'adaptogen'}"
+        (click)="setFilter('adaptogen')">Adaptogens</button>
+      <button class="pill" [ngClass]="{'active': currentFilter === 'digestion'}"
+        (click)="setFilter('digestion')">Digestion</button>
+    </div>
   </div>
 </div>
 
@@ -17,8 +37,9 @@
       <div *ngIf="filteredHerbs.length === 0" class="no-results" style="grid-column: 1/-1;">
         <h3>🌿 No herbs found</h3>
         <p>Try a different search or filter</p>
+        <button class="clear-btn" (click)="clearFilters()">Clear Filters</button>
       </div>
-      
+
       <div class="herb-card" *ngFor="let h of filteredHerbs; let i = index" [style.animation-delay]="(i * 0.04) + 's'">
         <div class="herb-header" [style.background]="h.bg">
           <div class="herb-icon-wrap" style="background:rgba(255,255,255,0.6)">{{ h.icon }}</div>
@@ -29,7 +50,32 @@
           </div>
         </div>
         <div class="herb-body">{{ h.desc }}</div>
+        <div class="herb-details">
+          <div class="detail-block">
+            <h5>Rasa (Taste)</h5>
+            <p>{{ h.rasa }}</p>
+          </div>
+          <div class="detail-block">
+            <h5>Virya (Potency)</h5>
+            <p>{{ h.virya }}</p>
+          </div>
+          <div class="detail-block">
+            <h5>Vipaka (Post-Digest)</h5>
+            <p>{{ h.vipaka }}</p>
+          </div>
+          <div class="detail-block">
+            <h5>Uses</h5>
+            <p>{{ h.uses }}</p>
+          </div>
         </div>
+        <div class="herb-benefits">
+          <span class="benefit-tag" *ngFor="let benefit of h.benefits">{{ benefit }}</span>
+        </div>
+        <div class="herb-doshas">
+          <span>Best for:</span>
+          <span class="dtag" [ngClass]="'d' + dosha" *ngFor="let dosha of h.doshas">{{ dosha }}</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>

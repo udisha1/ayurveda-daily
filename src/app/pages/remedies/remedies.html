@@ -39,6 +39,26 @@
             [ngClass]="{'active': currentFilter === 'energy'}" 
             (click)="setFilter('energy')">⚡ Energy
     </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'womens-health'}" 
+            (click)="setFilter('womens-health')">🌺 Women's Health
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'weight-management'}" 
+            (click)="setFilter('weight-management')">⚖️ Weight Management
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'cold-cough'}" 
+            (click)="setFilter('cold-cough')">🤧 Cold & Cough
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'heart-health'}" 
+            (click)="setFilter('heart-health')">❤️ Heart Health
+    </button>
+        <button class="tab" 
+            [ngClass]="{'active': currentFilter === 'brain-focus'}" 
+            (click)="setFilter('brain-focus')">🧠 Brain & Focus
+    </button>
     
     </div>
 </div>

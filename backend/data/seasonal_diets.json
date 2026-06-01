@@ -1,0 +1,22 @@
+[
+  {
+    "season": "Winter (Hemant/Shishir)",
+    "recommendations": "Warm, heavy, oily foods to pacify Vata. Incorporate root vegetables, hearty stews, and warming spices like ginger and cinnamon."
+  },
+  {
+    "season": "Summer (Grishma)",
+    "recommendations": "Cooling, light, and sweet foods to pacify Pitta. Emphasize fresh fruits, salads, coconut water, and mint."
+  },
+  {
+    "season": "Spring (Vasant)",
+    "recommendations": "Light, dry, and warming foods to pacify Kapha. Focus on bitter greens, legumes, and spicy foods to clear congestion."
+  },
+  {
+    "season": "Monsoon (Varsha)",
+    "recommendations": "Light, fresh, and easily digestible foods. Ginger, lemon, and warm soups help counteract sluggish digestion."
+  },
+  {
+    "season": "Autumn (Sharad)",
+    "recommendations": "Cooling and slightly sweet foods to balance the heat of Pitta. Ghee, milk, and sweet fruits are beneficial."
+  }
+]

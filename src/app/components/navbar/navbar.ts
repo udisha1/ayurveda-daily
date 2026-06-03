@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -9,7 +9,8 @@ import { RouterModule } from '@angular/router';
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
+
   isScrolled = false;
   menuOpen = false;
 

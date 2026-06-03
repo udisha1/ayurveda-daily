@@ -150,6 +150,7 @@ nav {
 
 @media (max-width: 768px) {
   nav {
+    padding: 1rem 1.5rem !important;
     min-height: 70px;
     position: relative;
   }
@@ -198,10 +199,14 @@ nav {
 
   .nav-logo span {
     font-size: 0.9rem;
+
+  .leaf-icon {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 1rem !important;
   }
   
 }
-=======
     :root {
       --forest:    #1E3A1A;
       --moss:      #2D5A27;

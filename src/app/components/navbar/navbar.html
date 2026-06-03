@@ -10,6 +10,7 @@
 </div>
 
   <ul class="nav-links" [class.active]="menuOpen">
+    <li class="mobile-home"><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
     <li><a routerLink="/doshas" routerLinkActive="active">Doshas</a></li>
     <li><a routerLink="/remedies" routerLinkActive="active">Remedies</a></li>
     <li><a routerLink="/herbs" routerLinkActive="active">Herbs</a></li>
@@ -17,6 +18,6 @@
     <li><a routerLink="/about" routerLinkActive="active">About</a></li>
   </ul>
 
-  <a class="nav-cta" routerLink="/">Home</a>
+  <a class="nav-cta" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
   
 </nav>

@@ -1,0 +1,121 @@
+<div class="remedy-wizard-container">
+  
+  <div *ngIf="!isCompleted">
+    <div class="wizard-steps">
+      <div class="step" [class.active]="currentStep === 1">1. Concern</div>
+      <div class="step" [class.active]="currentStep === 2">2. Age</div>
+      <div class="step" [class.active]="currentStep === 3">3. Symptoms</div>
+      <div class="step" [class.active]="currentStep === 4">4. Allergies</div>
+    </div>
+
+    <div class="wizard-content">
+      <div *ngIf="currentStep === 1">
+        <h2>Aapko kis cheez ke liye remedy chahiye?</h2>
+        <p class="description">Select a focus area or type your own concern below.</p>
+        <div class="category-grid">
+          <div *ngFor="let cat of categories" class="grid-option" [class.selected]="selectedCategory === cat.id" (click)="selectedCategory = cat.id">
+            <span class="icon">{{ cat.icon }}</span>
+            <span class="label">{{ cat.label }}</span>
+          </div>
+          <div class="grid-option" [class.selected]="selectedCategory === 'others'" (click)="selectedCategory = 'others'">
+            <span class="icon">✏️</span>
+            <span class="label">Others</span>
+          </div>
+        </div>
+        <div *ngIf="selectedCategory === 'others'" class="custom-input-box">
+          <label for="custCat">Apni dikkat yahan likhein:</label>
+          <input type="text" id="custCat" [(ngModel)]="customCategory" placeholder="E.g., Eye strain, Weight gain...">
+        </div>
+      </div>
+
+      <div *ngIf="currentStep === 2">
+        <h2>Select Your Age Group</h2>
+        <p class="description">Ayurvedic herb potencies vary strictly across life stages.</p>
+        <div class="wizard-options">
+          <div class="wizard-option" [class.selected]="selectedAge === 'child'" (click)="selectedAge = 'child'">
+            <input type="radio" id="child" name="age" value="child" [(ngModel)]="selectedAge"><label for="child">Child (Under 18)</label>
+          </div>
+          <div class="wizard-option" [class.selected]="selectedAge === 'adult'" (click)="selectedAge = 'adult'">
+            <input type="radio" id="adult" name="age" value="adult" [(ngModel)]="selectedAge"><label for="adult">Adult (18 - 50)</label>
+          </div>
+          <div class="wizard-option" [class.selected]="selectedAge === 'senior'" (click)="selectedAge = 'senior'">
+            <input type="radio" id="senior" name="age" value="senior" [(ngModel)]="selectedAge"><label for="senior">Senior (Above 50)</label>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="currentStep === 3">
+        <h2>What specific symptoms are you facing?</h2>
+        <p class="description">Select your symptoms or type what you are experiencing.</p>
+        <div class="wizard-options">
+          <div *ngFor="let sym of currentSymptoms" class="wizard-option" [class.selected]="selectedSymptom === sym.id" (click)="selectedSymptom = sym.id">
+            <input type="radio" [id]="sym.id" name="symptom" [value]="sym.id" [(ngModel)]="selectedSymptom"><label [for]="sym.id">{{ sym.label }}</label>
+          </div>
+          <div class="wizard-option" [class.selected]="selectedSymptom === 'others'" (click)="selectedSymptom = 'others'">
+            <input type="radio" id="symOthers" name="symptom" value="others" [(ngModel)]="selectedSymptom"><label for="symOthers">Something else / Others</label>
+          </div>
+        </div>
+        <div *ngIf="selectedSymptom === 'others'" class="custom-input-box">
+          <label for="custSym">Apne symptoms yahan batayein:</label>
+          <input type="text" id="custSym" [(ngModel)]="customSymptom" placeholder="Describe briefly...">
+        </div>
+      </div>
+
+      <div *ngIf="currentStep === 4">
+        <h2>Do you have any known allergies?</h2>
+        <p class="description">This ensures we filter out remedies with conflicting ingredients.</p>
+        <div class="wizard-options">
+          <div *ngFor="let alg of allergies" class="wizard-option" [class.selected]="selectedAllergy === alg.id" (click)="selectedAllergy = alg.id">
+            <input type="radio" [id]="alg.id" name="allergy" [value]="alg.id" [(ngModel)]="selectedAllergy"><label [for]="alg.id">{{ alg.label }}</label>
+          </div>
+          <div class="wizard-option" [class.selected]="selectedAllergy === 'others'" (click)="selectedAllergy = 'others'">
+            <input type="radio" id="algOthers" name="allergy" value="others" [(ngModel)]="selectedAllergy"><label for="algOthers">Other specific allergy</label>
+          </div>
+        </div>
+        <div *ngIf="selectedAllergy === 'others'" class="custom-input-box">
+          <label for="custAlg">Apni allergy ka naam likhein:</label>
+          <input type="text" id="custAlg" [(ngModel)]="customAllergy" placeholder="E.g., Honey, Dust allergy...">
+        </div>
+      </div>
+    </div>
+
+    <div class="wizard-actions">
+      <button class="btn-prev" *ngIf="currentStep > 1" (click)="prevStep()">Back</button>
+      <button class="btn-next" 
+              [disabled]="(currentStep === 1 && !selectedCategory) || (currentStep === 1 && selectedCategory === 'others' && !customCategory) || (currentStep === 2 && !selectedAge) || (currentStep === 3 && !selectedSymptom) || (currentStep === 3 && selectedSymptom === 'others' && !customSymptom) || (currentStep === 4 && !selectedAllergy) || (currentStep === 4 && selectedAllergy === 'others' && !customAllergy)"
+              (click)="nextStep()">
+        {{ currentStep === 4 ? 'Get Remedies' : 'Next' }}
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="isCompleted" class="remedy-result-view">
+    <div class="success-icon">✨ 🧘 ✨</div>
+    <h2>Your Customized Ayurvedic Remedy</h2>
+    <p class="result-sub">Based on your evaluation, here is your personal healing plan:</p>
+
+    <div class="result-card" [class.doctor-warning-border]="recommendedRemedy?.isDoctorAdvice">
+      <div class="result-section">
+        <h3>🌱 {{ recommendedRemedy?.isDoctorAdvice ? 'Expert Guidance:' : 'Recommended Remedy:' }}</h3>
+        <p class="highlight-text">{{ recommendedRemedy?.title }}</p>
+      </div>
+
+      <div class="result-section">
+        <h3>📝 Preparation Steps:</h3>
+        <ul class="prep-steps">
+          <li *ngFor="let step of recommendedRemedy?.steps">{{ step }}</li>
+        </ul>
+      </div>
+
+      <div class="result-section">
+        <h3>⏱️ Time: {{ recommendedRemedy?.time }} | ⭐ Rating: {{ recommendedRemedy?.rating?.length || 5 }}/5</h3>
+      </div>
+      
+      <div class="allergy-warning" *ngIf="selectedAllergy !== 'none' && !recommendedRemedy?.isDoctorAdvice">
+        ⚠️ <strong>Note:</strong> Safety filter applied for <strong>{{ selectedAllergy === 'others' ? customAllergy : selectedAllergy }}</strong>.
+      </div>
+    </div>
+
+    <button class="btn-restart" (click)="resetWizard()">🔄 Check Another Remedy</button>
+  </div>
+</div>

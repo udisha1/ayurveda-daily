@@ -14,6 +14,10 @@ export class NavbarComponent implements OnInit {
   isScrolled = false;
   menuOpen = false;
 
+  ngOnInit(): void {
+    // Initialization logic can go here
+  }
+
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }

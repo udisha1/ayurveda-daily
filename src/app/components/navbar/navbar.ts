@@ -12,4 +12,28 @@ import { RouterModule } from '@angular/router';
 export class NavbarComponent {
 
   isScrolled = false;
+  isMenuOpen = false;
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50;
+  }
+
+  @HostListener('window:resize')
+  onWindowResize() {
+    if (window.innerWidth > 768 && this.isMenuOpen) {
+      this.isMenuOpen = false;
+      document.body.style.overflow = '';
+    }
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+    document.body.style.overflow = '';
+  }
 }

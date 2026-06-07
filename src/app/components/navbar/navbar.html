@@ -4,12 +4,44 @@
     <div class="leaf-icon">🌿</div>
     <span>Ayur<em>Veda</em> Daily</span>
   </a>
-  <ul class="nav-links">
-    <li><a routerLink="/doshas" routerLinkActive="active">Doshas</a></li>
-    <li><a routerLink="/remedies" routerLinkActive="active">Remedies</a></li>
-    <li><a routerLink="/herbs" routerLinkActive="active">Herbs</a></li>
-    <li><a routerLink="/routine" routerLinkActive="active">Routine</a></li>
-    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-  </ul>
-  <a class="nav-cta" routerLink="/">Home</a>
+
+  <!-- Hamburger Menu Button (mobile only) -->
+  <button
+    class="hamburger-btn"
+    (click)="toggleMenu()"
+    [attr.aria-expanded]="isMenuOpen"
+    aria-label="Toggle navigation menu"
+    [ngClass]="{'is-active': isMenuOpen}">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <!-- Backdrop overlay (mobile only) -->
+  <div
+    class="sidebar-overlay"
+    [ngClass]="{'is-visible': isMenuOpen}"
+    (click)="closeMenu()">
+  </div>
+
+  <!-- Sidebar / Nav Links Container -->
+  <div class="mobile-sidebar" [ngClass]="{'is-open': isMenuOpen}">
+    <!-- Close button inside sidebar -->
+    <button
+      class="sidebar-close-btn"
+      (click)="closeMenu()"
+      aria-label="Close navigation menu">
+      ✕
+    </button>
+
+    <ul class="nav-links">
+      <li><a routerLink="/doshas" routerLinkActive="active" (click)="closeMenu()">Doshas</a></li>
+      <li><a routerLink="/remedies" routerLinkActive="active" (click)="closeMenu()">Remedies</a></li>
+      <li><a routerLink="/herbs" routerLinkActive="active" (click)="closeMenu()">Herbs</a></li>
+      <li><a routerLink="/routine" routerLinkActive="active" (click)="closeMenu()">Routine</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+    </ul>
+    <a class="nav-cta" routerLink="/" (click)="closeMenu()">Home</a>
+  </div>
 </nav>
+

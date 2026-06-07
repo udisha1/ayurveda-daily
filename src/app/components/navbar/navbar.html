@@ -1,5 +1,6 @@
-<nav [ngStyle]="{'padding': isScrolled ? '0.6rem 3rem' : '1rem 3rem'}">
-  <a class="nav-logo" routerLink="/">
+<nav [ngClass]="{'nav-scrolled': isScrolled}">
+  <!-- Logo Section -->
+  <a routerLink="/" class="nav-logo" (click)="closeMenu()">
     <div class="leaf-icon">🌿</div>
     <span>Ayur<em>Veda</em> Daily</span>
   </a>

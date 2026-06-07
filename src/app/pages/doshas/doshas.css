@@ -775,3 +775,133 @@ footer {
     padding: 8rem 1.5rem 3rem;
   }
 }
+
+/* --- Quiz Result Container Layout --- */
+#result {
+  padding: 4rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cream);
+  min-height: 60vh;
+}
+
+.result-wrap {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  padding: 3rem;
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  border-top: 8px solid var(--sage);
+  transition: all 0.3s ease;
+}
+
+/* Dynamic Dosha Theme Accents */
+.result-wrap.vata { border-top-color: #5c9ead; background: #f4f9fa; }
+.result-wrap.pitta { border-top-color: var(--terracotta); background: #fffcf9; }
+.result-wrap.kapha { border-top-color: var(--moss); background: #f6fbf5; }
+
+.result-icon {
+  font-size: 3.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.result-header h2 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.energy-element {
+  font-family: var(--font-ui);
+  color: var(--sage);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 2rem 0;
+}
+
+.description {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: var(--charcoal);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Traits and Recommendations Splits */
+.traits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+  .traits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.trait-block h3 {
+  font-family: var(--font-display);
+  color: var(--forest);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  padding-bottom: 0.25rem;
+}
+
+.trait-block ul {
+  list-style-type: none;
+}
+
+.trait-block ul li {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.trait-block ul li::before {
+  content: "•";
+  color: var(--sage);
+  font-weight: bold;
+}
+
+/* Retake Action Button */
+.btn-retake {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 2rem;
+  background: var(--forest);
+  color: var(--cream);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-retake:hover {
+  background: var(--turmeric);
+  color: var(--forest);
+  transform: translateY(-2px);
+}

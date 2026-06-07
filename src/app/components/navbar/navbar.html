@@ -4,23 +4,12 @@
     <div class="leaf-icon">🌿</div>
     <span>Ayur<em>Veda</em> Daily</span>
   </a>
-
-  <!-- Mobile Burger Icon Toggle Button -->
-  <div class="menu-toggle" (click)="toggleMenu()">
-    <span class="material-symbols-outlined">
-      {{ menuOpen ? 'close' : 'menu' }}
-    </span>
-  </div>
-
-  <!-- Links Grid - Binding the active css state dynamically here -->
-  <ul class="nav-links" [ngClass]="{'active': menuOpen}">
-    <li><a routerLink="/doshas" (click)="closeMenu()">Doshas</a></li>
-    <li><a routerLink="/remedies" (click)="closeMenu()">Remedies</a></li>
-    <li><a routerLink="/herbs" (click)="closeMenu()">Herbs</a></li>
-    <li><a routerLink="/routine" (click)="closeMenu()">Routine</a></li>
-    <li><a routerLink="/about" (click)="closeMenu()">About</a></li>
+  <ul class="nav-links">
+    <li><a routerLink="/doshas" routerLinkActive="active">Doshas</a></li>
+    <li><a routerLink="/remedies" routerLinkActive="active">Remedies</a></li>
+    <li><a routerLink="/herbs" routerLinkActive="active">Herbs</a></li>
+    <li><a routerLink="/routine" routerLinkActive="active">Routine</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
   </ul>
-
-  <!-- CTA Action Action Button -->
-  <button class="nav-cta" routerLink="/doshas" (click)="closeMenu()">Home</button>
+  <a class="nav-cta" routerLink="/">Home</a>
 </nav>

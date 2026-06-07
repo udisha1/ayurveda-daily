@@ -200,5 +200,23 @@ export const REMEDIES: Remedy[] = [
     efficacy: 5,
     time: '3 min',
     doshas: ['V', 'K']
-  }
+  },
+  {
+  cat: 'stress',
+  icon: '🧘',
+  bg: '#FFF0F5',
+  banner: '#E91E63',
+  cat_label: 'Stress Relief',
+  title: 'Warm Saffron Milk',
+  desc: 'Calms mind and improves relaxation.',
+  steps: [
+    'Heat milk',
+    'Add saffron strands',
+    'Mix a little honey',
+    'Drink before sleep'
+  ],
+  efficacy: 4,
+  time: '5 min',
+  doshas: ['V', 'P']
+}
 ];

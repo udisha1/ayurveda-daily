@@ -2,16 +2,17 @@
   <div class="footer-inner">
     <div class="footer-brand">Ayur<em>Veda</em> Daily</div>
 
-    <div class="footer-links">
-      <a routerLink="/about">About</a>
-      <a routerLink="/remedies">Remedies</a>
-      <a routerLink="/herbs">Herbs</a>
-      <a routerLink="/doshas">Doshas</a>
-      <a routerLink="/contact">Contact</a>
-    </div>
+    <nav class="footer-links">
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/remedies" routerLinkActive="active">Remedies</a>
+      <a routerLink="/herbs" routerLinkActive="active">Herbs</a>
+      <a routerLink="/doshas" routerLinkActive="active">Doshas</a>
+      <a routerLink="/routine" routerLinkActive="active">Routine</a>
+    </nav>
   </div>
 
   <div class="footer-copy">
-    © {{year}} AyurVeda Daily — Ancient Healing for the Modern World. Not a substitute for medical advice.
+    © {{year}} AyurVeda Daily — Ancient Healing for the Modern World.
+    Not a substitute for medical advice.
   </div>
 </footer>

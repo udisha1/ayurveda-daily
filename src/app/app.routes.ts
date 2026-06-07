@@ -7,7 +7,7 @@ import { RemediesComponent } from './pages/remedies/remedies';
 import { RoutineComponent } from './pages/routine/routine';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'about', component: AboutComponent },
   { path: 'doshas', component: DoshasComponent },
   { path: 'herbs', component: HerbsComponent },

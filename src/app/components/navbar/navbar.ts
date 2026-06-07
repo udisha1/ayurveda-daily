@@ -9,7 +9,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './navbar.html',
   styleUrls: ['./navbar.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   isScrolled = false;
 }

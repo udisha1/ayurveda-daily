@@ -164,7 +164,26 @@ export const REMEDIES: Remedy[] = [
     time: '15 min',
     doshas: ['V', 'P']
   },
-
+  
+{
+  cat: 'hair',
+  icon: '🌿',
+  bg: '#e8f4e1',
+  banner: '#6B8F47',
+  cat_label: 'Hair Health',
+  title: 'Amla Hair Mask',
+  desc: 'Strengthens hair and reduces dandruff.',
+  steps: [
+    'Mix amla powder with water',
+    'Apply evenly on scalp',
+    'Leave for 30 minutes',
+    'Rinse thoroughly'
+  ],
+  efficacy: 4,
+  time: '30 min',
+  doshas: ['V', 'P']
+},
+  
   {
     cat: 'joints',
     icon: '🦴',
@@ -200,5 +219,23 @@ export const REMEDIES: Remedy[] = [
     efficacy: 5,
     time: '3 min',
     doshas: ['V', 'K']
-  }
+  },
+  {
+  cat: 'stress',
+  icon: '🧘',
+  bg: '#FFF0F5',
+  banner: '#E91E63',
+  cat_label: 'Stress Relief',
+  title: 'Warm Saffron Milk',
+  desc: 'Calms mind and improves relaxation.',
+  steps: [
+    'Heat milk',
+    'Add saffron strands',
+    'Mix a little honey',
+    'Drink before sleep'
+  ],
+  efficacy: 4,
+  time: '5 min',
+  doshas: ['V', 'P']
+}
 ];

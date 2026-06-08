@@ -83,6 +83,52 @@
           <span class="tbadge">⏱ {{ r.time }}</span>
         </div>
 
+        <div class="reviews-section">
+          <h5>Reviews</h5>
+
+          <input
+            type="text"
+            placeholder="Nickname (Optional)"
+            [(ngModel)]="reviewInputs[r.title].nickname"
+          />
+
+          <textarea
+            rows="3"
+            placeholder="Share your experience..."
+            [(ngModel)]="reviewInputs[r.title].comment"
+          ></textarea>
+
+          <button
+            class="review-btn"
+            (click)="submitReview(r.title)"
+          >
+            Submit Review
+          </button>
+
+          <div
+            class="review-list"
+            *ngIf="reviews[r.title]?.length; else noReviews"
+          >
+            <div
+              class="review-item"
+              *ngFor="let review of reviews[r.title]"
+            >
+              <div class="review-head">
+                <strong>{{ review.name }}</strong>
+                <span>{{ review.date }}</span>
+              </div>
+
+              <p>{{ review.comment }}</p>
+            </div>
+          </div>
+
+          <ng-template #noReviews>
+            <p class="no-review-text">
+              No reviews yet. Be the first to share your experience.
+            </p>
+          </ng-template>
+        </div>
+
       </div>
     </div>
 

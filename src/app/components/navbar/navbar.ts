@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 
 export class NavbarComponent {
+
   isScrolled = false;
   menuOpen = false;
   healingMode = false;
@@ -23,4 +24,5 @@ export class NavbarComponent {
     this.healingMode = !this.healingMode;
     document.body.classList.toggle('healing-mode');
   }
+}
 }

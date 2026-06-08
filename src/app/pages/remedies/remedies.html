@@ -64,6 +64,11 @@
         </div>
         
         <div class="card-body">{{ r.desc }}</div>
+        <div class="share-section">
+      
+
+
+         
         
         <div class="steps-block">
           <h5>How to Prepare</h5>
@@ -74,6 +79,23 @@
         </div>
 
         <div class="card-foot">
+          
+  <button class="share-btn whatsapp"
+          (click)="shareWhatsApp(r)">
+    <span>🟢</span> WhatsApp
+  </button>
+
+  <button class="share-btn twitter"
+          (click)="shareTwitter(r)">
+    <span>✖</span> X/Twitter
+  </button>
+
+  <button class="share-btn native"
+          *ngIf="canNativeShare"
+          (click)="nativeShare(r)">
+    <span>🔗</span> Share
+  </button>
+</div>
           <div class="eff">
             <span class="eff-lbl">Efficacy</span>
             <div class="dots">
@@ -88,3 +110,6 @@
 
   </div>
 </section>
+<div class="copy-toast" *ngIf="copiedMessage">
+  {{ copiedMessage }}
+</div>

@@ -13,7 +13,27 @@
       <button class="btn-primary" routerLink="/remedies">Explore Remedies</button>
       <button class="btn-outline" routerLink="/doshas">Discover Your Dosha</button>
     </div>
+    <div class="healing-controls">
+      <button class="btn-primary" (click)="startGuidedBreathing()">
+        🎧 Start Guided Breathing
+      </button>
+
+      <button
+        class="btn-outline"
+        *ngIf="isSpeaking"
+        (click)="stopNarration()">
+        Stop Narration
+      </button>
+    </div>
   </div>
+</section>
+
+<section class="healing-audio">
+  <h3>Relaxing Nature Sounds</h3>
+
+  <audio controls loop>
+    <source src="/audio/rain.mp3" type="audio/mpeg">
+  </audio>
 </section>
 
 <section id="newsletter">

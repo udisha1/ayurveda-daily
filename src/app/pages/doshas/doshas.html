@@ -39,7 +39,7 @@
   </div>
 </section>
 
-<section id="result" *ngIf="quizComplete">
+<section id="result" *ngIf="quizComplete && primaryDosha">
   <div class="result-wrap">
     <div class="result-badge" [style.background]="primaryDosha.bg" [style.color]="primaryDosha.color">
       {{ primaryDosha.icon }} {{ primaryDosha.name }} Dominant

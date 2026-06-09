@@ -164,7 +164,26 @@ export const REMEDIES: Remedy[] = [
     time: '15 min',
     doshas: ['V', 'P']
   },
-
+  
+{
+  cat: 'hair',
+  icon: '🌿',
+  bg: '#e8f4e1',
+  banner: '#6B8F47',
+  cat_label: 'Hair Health',
+  title: 'Amla Hair Mask',
+  desc: 'Strengthens hair and reduces dandruff.',
+  steps: [
+    'Mix amla powder with water',
+    'Apply evenly on scalp',
+    'Leave for 30 minutes',
+    'Rinse thoroughly'
+  ],
+  efficacy: 4,
+  time: '30 min',
+  doshas: ['V', 'P']
+},
+  
   {
     cat: 'joints',
     icon: '🦴',

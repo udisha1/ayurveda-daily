@@ -39,12 +39,15 @@
     #remediesSection{padding:4rem 3rem 6rem;background:var(--parchment);}
     .remedies-wrap{max-width:1200px;margin:0 auto;}
     .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.8rem;}
-    .card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid rgba(185,196,155,0.3);transition:transform 0.3s,box-shadow 0.3s;animation:fadeUp 0.5s ease forwards;}
-    .card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(30,58,26,0.12);}
-    .card-banner{height:6px;}
+    .card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid rgba(185,196,155,0.3);transition:transform 0.3s ease,box-shadow 0.3s ease, border-color 0.35s ease, background 0.35s ease;animation:fadeUp 0.5s ease forwards; cursor:pointer;will-change:transform;}
+    .card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 24px 50px rgba(30,58,26,0.18),0 0 12px rgba(107,143,71,0.12);border-color:rgba(107,143,71,0.45);}
+    .card:hover .card-icon{transform:scale(1.12) rotate(5deg);}
+    .card-banner{height:6px;transition:height 0.3s ease;}
     .card-head{padding:1.6rem 1.8rem 0.8rem;display:flex;gap:1rem;align-items:flex-start;}
-    .card-icon{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0;}
-    .card-meta h4{font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--forest);margin-bottom:0.1rem;}
+    .card:hover .card-banner{height:10px;}
+    .card-icon{width:54px;height:54px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.7rem;flex-shrink:0;transition:transform 0.35s ease;}
+    .card-meta h4{font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--forest);margin-bottom:0.1rem;transition:color 0.3s ease;}
+    .card:hover .card-meta h4{color:var(--sage);}
     .card-cat{font-family:var(--font-ui);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;}
     .card-body{padding:0 1.8rem;font-size:0.95rem;color:#4a5e3a;font-weight:300;}
     .steps-block{padding:1rem 1.8rem 0;}

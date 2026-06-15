@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./navbar.css']
 })
 export class NavbarComponent {
-
   isScrolled = false;
+
+  closeMenu() {
+  }
 }

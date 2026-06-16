@@ -12,4 +12,7 @@ import { RouterModule } from '@angular/router';
 export class NavbarComponent {
 
   isScrolled = false;
+  closeMenu() {
+    
+  }
 }

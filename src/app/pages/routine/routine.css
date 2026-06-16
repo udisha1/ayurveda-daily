@@ -93,6 +93,39 @@
     .footer-links a:hover{color:var(--turmeric);}
     .footer-copy{width:100%;text-align:center;font-family:var(--font-ui);font-size:0.75rem;color:rgba(217,196,154,0.5);margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(217,196,154,0.15);}
 
+    .recommendations {
+  margin-top: 16px;
+}
+
+.recommendations h5 {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #2d4a2f;
+}
+
+.rec-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rec-chip {
+  background: #f5ead0;
+  color: #2d4a2f;
+  border: 1px solid #d9c08c;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.rec-chip:hover {
+  transform: translateY(-2px);
+}
+
     @keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
     @media(max-width:768px){nav{padding:0.75rem 1.5rem;}.nav-links,.nav-cta{display:none;}.page-hero,#intro,#timeline,#seasonal,footer{padding-left:1.5rem;padding-right:1.5rem;}.intro-wrap{grid-template-columns:1fr;gap:2rem;}.tl::before{left:70px;}.tl-item{grid-template-columns:70px 1fr;}.tl-dot{left:61px;}}
+
  

@@ -11,7 +11,6 @@ import { RouterModule } from '@angular/router';
 })
 
 export class NavbarComponent {
-
   isScrolled = false;
   menuOpen = false;
   healingMode = false;
@@ -25,4 +24,7 @@ export class NavbarComponent {
     document.body.classList.toggle('healing-mode');
   }
 }
+}
+  closeMenu() {
+  }
 }

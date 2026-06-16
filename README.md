@@ -13,7 +13,7 @@ A clean, user-friendly web app built with **Angular** to help you explore:
 - A responsive UI that works on mobile and desktop
 
 ## Live Demo
-https://stupendous-cupcake-e0c840.netlify.app
+https://ayurveda-daily-git-main-udisha-narayan-s-projects.vercel.app
 
 ## Features ✨
 - Quick dosha discovery quiz
@@ -60,6 +60,7 @@ Contributions are welcome! If you’re making improvements for GSSOC 26:
 - Keep UI changes consistent and accessible
 - Ensure new sections are easy to read on small screens
 - Follow existing project conventions
+- Do add screenshots of the changes made in PR's
 
 ## License
 Add your project license here (e.g., MIT/Apache-2.0) if applicable.

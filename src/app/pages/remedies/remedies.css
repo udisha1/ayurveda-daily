@@ -3,7 +3,7 @@
     html{scroll-behavior:smooth;}
     body{background:var(--cream);color:var(--forest);font-family:var(--font-body);font-size:18px;line-height:1.7;overflow-x:hidden;}
     ::-webkit-scrollbar{width:6px;}::-webkit-scrollbar-track{background:var(--mint);}::-webkit-scrollbar-thumb{background:var(--sage);border-radius:3px;}
-    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(30,58,26,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(163,184,122,0.2);transition:padding 0.3s;}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(30,58,26,0.95);border-bottom:1px solid rgba(163,184,122,0.2);transition:padding 0.3s;}
     .nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none;}
     .nav-logo .leaf{width:36px;height:36px;background:var(--turmeric);border-radius:50% 0 50% 0;display:flex;align-items:center;justify-content:center;font-size:1.1rem;transform:rotate(-15deg);}
     .nav-logo span{font-family:var(--font-display);font-size:1.35rem;color:var(--cream);}
@@ -111,6 +111,7 @@
     font-weight:700;
     letter-spacing:0.08em;
     text-transform:uppercase;
+    color:rgba(45,90,39,0.55);
     color:var(--clay);
     margin-bottom:0.2rem;
 }

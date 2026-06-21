@@ -5,6 +5,7 @@
     <span>Ayur<em>Veda</em> Daily</span>
   </a>
     <div class="menu-toggle" (click)="toggleMenu()">
+  <div class="menu-toggle" (click)="toggleMenu()">
     ☰
   </div>
 
@@ -14,6 +15,19 @@
     <li><a routerLink="/herbs" routerLinkActive="active">Herbs</a></li>
     <li><a routerLink="/routine" routerLinkActive="active">Routine</a></li>
     <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+
+    <!-- Mobile Healing Mode -->
+    <li class="mobile-healing">
+      <button class="healing-btn" (click)="toggleHealingMode()">
+        {{ healingMode ? '🌿 Healing ON' : '✨ Healing Mode' }}
+      </button>
+    </li>
   </ul>
-  <a class="nav-cta" routerLink="/">Home</a>
+
+  <div class="nav-actions">
+    <a class="nav-cta" routerLink="/">Home</a>
+    <button class="healing-btn" (click)="toggleHealingMode()">
+      {{ healingMode ? '🌿 Healing ON' : '✨ Healing Mode' }}
+    </button>
+  </div>
 </nav>

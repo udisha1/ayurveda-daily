@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./remedies.css']
   imports: [CommonModule],
   templateUrl: './remedies.html',
+  styleUrls: ['./remedies.css']
   styleUrl: './remedies.css'
 })
 export class RemediesComponent {

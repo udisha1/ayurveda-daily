@@ -143,4 +143,46 @@
     font-size: 1rem;
   }
 }
+
+.healing-btn {
+  margin-left: 12px;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: #d7e9c0;
+  color: #1e3a1a;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.healing-btn:hover {
+  transform: translateY(-2px);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-healing {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .desktop-healing {
+    display: none;
+  }
+
+  .mobile-healing {
+    display: block;
+  }
+
+  .mobile-healing .healing-btn {
+    margin-left: 0;
+  }
+}
+
     .nav-cta:hover { background: var(--fern); transform: translateY(-1px);}

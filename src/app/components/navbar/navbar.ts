@@ -19,6 +19,7 @@ export class NavbarComponent {
     this.menuOpen = !this.menuOpen;
   }
 
+  ngOnInit(): void {
   toggleHealingMode() {
     this.healingMode = !this.healingMode;
     document.body.classList.toggle('healing-mode');

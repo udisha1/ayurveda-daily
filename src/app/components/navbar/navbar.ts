@@ -23,8 +23,9 @@ export class NavbarComponent {
     this.healingMode = !this.healingMode;
     document.body.classList.toggle('healing-mode');
   }
-}
-}
+
   closeMenu() {
+    this.menuOpen = false;
   }
 }
+

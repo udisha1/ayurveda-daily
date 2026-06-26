@@ -3,7 +3,12 @@
     <div class="leaf-icon">🌿</div>
     <span>Ayur<em>Veda</em> Daily</span>
   </a>
-  <ul class="nav-links">
+  <div
+  class="menu-toggle"
+  (click)="isMenuOpen = !isMenuOpen">
+  ☰
+</div>
+  <ul class="nav-links"  [class.show]="isMenuOpen">
     <li><a routerLink="/doshas" routerLinkActive="active">Doshas</a></li>
     <li><a routerLink="/remedies" routerLinkActive="active">Remedies</a></li>
     <li><a routerLink="/herbs" routerLinkActive="active">Herbs</a></li>

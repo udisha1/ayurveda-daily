@@ -1,10 +1,6 @@
 {
   "version": 2,
-  "framework": "angular",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
+  "rewrites": [
+    { "source": "/((?!assets|.*\\.[\\w]+$).*)", "destination": "/index.html" }
   ]
 }

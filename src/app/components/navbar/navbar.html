@@ -1,19 +1,33 @@
-<nav [ngStyle]="{'padding': isScrolled ? '0.6rem 3rem' : '1rem 3rem'}">
-  <a class="nav-logo" routerLink="/">
+<nav [ngClass]="{'nav-scrolled': isScrolled}">
+  <!-- Logo Section -->
+  <a routerLink="/" class="nav-logo" (click)="closeMenu()">
     <div class="leaf-icon">🌿</div>
     <span>Ayur<em>Veda</em> Daily</span>
   </a>
-  <div
-  class="menu-toggle"
-  (click)="isMenuOpen = !isMenuOpen">
-  ☰
-</div>
-  <ul class="nav-links"  [class.show]="isMenuOpen">
+
+  <div class="menu-toggle" (click)="toggleMenu()">
+    ☰
+  </div>
+
+  <ul class="nav-links" [class.active]="menuOpen">
     <li><a routerLink="/doshas" routerLinkActive="active">Doshas</a></li>
     <li><a routerLink="/remedies" routerLinkActive="active">Remedies</a></li>
     <li><a routerLink="/herbs" routerLinkActive="active">Herbs</a></li>
     <li><a routerLink="/routine" routerLinkActive="active">Routine</a></li>
     <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+
+    <!-- Mobile Healing Mode -->
+    <li class="mobile-healing">
+      <button class="healing-btn" (click)="toggleHealingMode()">
+        {{ healingMode ? '🌿 Healing ON' : '✨ Healing Mode' }}
+      </button>
+    </li>
   </ul>
-  <a class="nav-cta" routerLink="/">Home</a>
+
+  <div class="nav-actions">
+    <a class="nav-cta" routerLink="/">Home</a>
+    <button class="healing-btn" (click)="toggleHealingMode()">
+      {{ healingMode ? '🌿 Healing ON' : '✨ Healing Mode' }}
+    </button>
+  </div>
 </nav>

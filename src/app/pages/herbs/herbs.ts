@@ -22,8 +22,9 @@ interface Herb {
 
 @Component({
   selector: 'app-herbs',
-  templateUrl: './herbs.html',
+  standalone: true,
   imports: [CommonModule, FormsModule],
+  templateUrl: './herbs.html',
   styleUrls: ['./herbs.css']
 })
 export class HerbsComponent implements OnInit {

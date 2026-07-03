@@ -4,10 +4,10 @@ import { REMEDIES, Remedy } from './remedies-data';
 
 @Component({
   selector: 'app-remedies',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './remedies.html',
   styleUrls: ['./remedies.css']
-  styleUrl: './remedies.css'
 })
 export class RemediesComponent {
 

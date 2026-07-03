@@ -1,22 +1,47 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Routine } from './routine';
+import { RoutineComponent } from './routine';
 
-describe('Routine', () => {
-  let component: Routine;
-  let fixture: ComponentFixture<Routine>;
+describe('RoutineComponent', () => {
+  let component: RoutineComponent;
+  let fixture: ComponentFixture<RoutineComponent>;
 
   beforeEach(async () => {
+    localStorage.clear();
+
     await TestBed.configureTestingModule({
-      imports: [Routine],
+      imports: [RoutineComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Routine);
+    fixture = TestBed.createComponent(RoutineComponent);
     component = fixture.componentInstance;
-    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should toggle completion and persist it for the current day', () => {
+    const item = component.phases.morning[0];
+
+    expect(component.isCompleted(item)).toBeFalse();
+
+    component.toggleCompletion(item);
+    fixture.detectChanges();
+
+    expect(component.isCompleted(item)).toBeTrue();
+    expect(localStorage.getItem(component.getStorageKey())).toContain('Wake Before Sunrise');
+  });
+
+  it('should restore completions from localStorage for the current day', () => {
+    const item = component.phases.morning[0];
+    localStorage.setItem(component.getStorageKey(), JSON.stringify({ 'morning:Wake Before Sunrise': true }));
+
+    fixture = TestBed.createComponent(RoutineComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+
+    expect(component.isCompleted(item)).toBeTrue();
   });
 });

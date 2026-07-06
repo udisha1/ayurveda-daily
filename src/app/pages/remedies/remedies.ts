@@ -6,7 +6,6 @@ import { REMEDIES, Remedy } from './remedies-data';
   selector: 'app-remedies',
   imports: [CommonModule],
   templateUrl: './remedies.html',
-  styleUrls: ['./remedies.css']
   styleUrl: './remedies.css'
 })
 export class RemediesComponent {

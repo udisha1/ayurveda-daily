@@ -5,6 +5,7 @@
 ---
 
 ## What is AyurvedaDaily?
+
 A clean, user-friendly web app built with **Angular** to help you explore:
 
 - **Dosha Quiz** (Vata, Pitta, Kapha)
@@ -13,20 +14,24 @@ A clean, user-friendly web app built with **Angular** to help you explore:
 - A responsive UI that works on mobile and desktop
 
 ## Live Demo
+
 https://ayurveda-daily-git-main-udisha-narayan-s-projects.vercel.app
 
 ## Features ✨
+
 - Quick dosha discovery quiz
 - Browse remedies, herbs, and routines
 - Clear layout, smooth navigation, and responsive styling
 - Built with modern Angular project structure
 
-## Tech Stack 🧰
+## Tech Stack 🛠️
+
 - **Angular**
 - **TypeScript**
 - **HTML / CSS**
 
 ## Run it locally
+
 1. Install dependencies:
 ```bash
 npm install
@@ -56,12 +61,13 @@ ng e2e
 Note: Angular CLI does not ship with a default end-to-end test framework. Configure one that fits your needs.
 
 ## Contributing
-Contributions are welcome! If you’re making improvements for GSSOC 26:
+
+Contributions are welcome! If you're making improvements for GSSOC '26:
 - Keep UI changes consistent and accessible
 - Ensure new sections are easy to read on small screens
 - Follow existing project conventions
-- Do add screenshots of the changes made in PR's
+- Please include screenshots of your changes in the PR
 
 ## License
-Add your project license here (e.g., MIT/Apache-2.0) if applicable.
 
+Specify your project license here (e.g., MIT or Apache-2.0), if applicable.

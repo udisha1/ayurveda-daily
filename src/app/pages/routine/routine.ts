@@ -30,13 +30,55 @@ export class RoutineComponent implements OnInit, OnDestroy {
 
   phases: any = {
     morning: [
-      { id: 'm1', time: '4:30–5:00', dot: '#D4930F', tag: 'Brahma Muhurta', icon: '🌌', title: 'Wake Before Sunrise', desc: 'The hour before sunrise...', benefit: 'Heightened clarity...' }
+      {
+  time:'4:30–5:00',
+  dot:'#D4930F',
+  tag:'Brahma Muhurta',
+  icon:'🌌',
+  title:'Wake Before Sunrise',
+  desc:'The hour before sunrise...',
+  benefit:'Heightened clarity...',
+  recommendations: [
+  '💧 Drink warm water',
+  '🧘 Meditation & Pranayama',
+  '📔 Journal or plan the day'
+]
+}
     ],
     day: [
-      { id: 'd1', time: '8:00–12:00', dot: '#2D5A27', tag: 'Karma', icon: '💼', title: 'Peak Work Hours', desc: 'As Kapha transitions...', benefit: 'Optimal cognitive performance...' }
+      {
+  time:'8:00–12:00',
+  dot:'#2D5A27',
+  tag:'Karma',
+  icon:'💼',
+  title:'Peak Work Hours',
+  desc:'As Kapha transitions...',
+  benefit:'Optimal cognitive performance...',
+  recommendations: [
+  '💼 Deep work',
+  '📚 Focused study',
+  '💧 Hydration breaks',
+  '🥗 Mindful eating'
+]
+}
     ],
     evening: [
-      { id: 'e1', time: '6:00–6:30', dot: '#5C3317', tag: 'Sandhya', icon: '🌇', title: 'Evening Walk', desc: 'A gentle sunset walk...', benefit: 'Lowers cortisol...' }
+      {
+  time:'6:00–6:30',
+  dot:'#5C3317',
+  tag:'Sandhya',
+  icon:'🌇',
+  title:'Evening Walk',
+  desc:'A gentle sunset walk...',
+  benefit:'Lowers cortisol...',
+  recommendations: [
+  '🚶 Gentle walk',
+  '📵 Reduce screen time',
+  '🍲 Light dinner',
+  '🙏 Relaxation or gratitude'
+]
+}
+      // Baaki evening items
     ]
   };
 

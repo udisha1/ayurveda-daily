@@ -84,6 +84,15 @@
           </h4>
           <p>{{ item.desc }}</p>
           <div class="benefit">✦ {{ item.benefit }}</div>
+          <div class="recommendations" *ngIf="item.recommendations">
+  <h5>✨ Recommended Activities</h5>
+
+  <div class="rec-chips">
+    <span class="rec-chip" *ngFor="let rec of item.recommendations">
+      {{ rec }}
+    </span>
+  </div>
+</div>
         </div>
       </div>
     </div>

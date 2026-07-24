@@ -85,4 +85,103 @@
       transition: background 0.2s, transform 0.15s;
       text-decoration: none;
     }
+    .nav-cta:hover { background: var(--fern); transform: translateY(-1px); }
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: var(--cream);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    padding: 1rem 1.5rem !important;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    background: rgba(30, 58, 26, 0.98);
+    backdrop-filter: blur(12px);
+
+    padding: 2rem 0;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+  }
+
+  .nav-links.active {
+    max-height: 500px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .nav-logo span {
+    font-size: 1.1rem;
+  }
+
+  .nav-logo .leaf-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+}
+
+.healing-btn {
+  margin-left: 12px;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: #d7e9c0;
+  color: #1e3a1a;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.healing-btn:hover {
+  transform: translateY(-2px);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-healing {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .desktop-healing {
+    display: none;
+  }
+
+  .mobile-healing {
+    display: block;
+  }
+
+  .mobile-healing .healing-btn {
+    margin-left: 0;
+  }
+}
     .nav-cta:hover { background: var(--fern); transform: translateY(-1px);}

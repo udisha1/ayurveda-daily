@@ -84,7 +84,81 @@
     .footer-copy{width:100%;text-align:center;font-family:var(--font-ui);font-size:0.75rem;color:rgba(217,196,154,0.5);margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(217,196,154,0.15);}
     @keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
     @media(max-width:768px){nav{padding:0.75rem 1.5rem;}.nav-links,.nav-cta{display:none;}.page-hero,#filterBar,#remediesSection,footer{padding-left:1.5rem;padding-right:1.5rem;}#filterBar{top:56px;}.grid{grid-template-columns:1fr;}}
-  
+
+.reviews-section {
+  margin-top: 1rem;
+  padding: 1rem 1.8rem 1.4rem;
+  border-top: 1px solid var(--mint);
+}
+
+.reviews-section h5 {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-bottom: 0.75rem;
+}
+
+.reviews-section input,
+.reviews-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--mint);
+  border-radius: 10px;
+  background: var(--white);
+  font-family: var(--font-ui);
+}
+
+.review-btn {
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--turmeric);
+  color: var(--forest);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.review-btn:hover {
+  background: var(--fern);
+}
+
+.review-list {
+  margin-top: 1rem;
+}
+
+.review-item {
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
+  background: var(--cream);
+  border: 1px solid var(--mint);
+}
+
+.review-head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.review-head strong {
+  color: var(--forest);
+}
+
+.review-head span {
+  font-size: 0.75rem;
+  color: var(--sage);
+}
+
+.no-review-text {
+  margin-top: 0.8rem;
+  color: var(--sage);
+  font-style: italic;
   
 /* SHARE SECTION */
 

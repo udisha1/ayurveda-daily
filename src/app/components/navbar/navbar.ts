@@ -18,6 +18,8 @@ export class NavbarComponent {
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
+}
+}
 
   toggleHealingMode() {
     this.healingMode = !this.healingMode;

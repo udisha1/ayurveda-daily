@@ -63,5 +63,5 @@ Contributions are welcome! If you’re making improvements for GSSOC 26:
 - Do add screenshots of the changes made in PR's
 
 ## License
-Add your project license here (e.g., MIT/Apache-2.0) if applicable.
+This project is licensed under the MIT License.
 

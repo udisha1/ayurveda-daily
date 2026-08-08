@@ -37,9 +37,9 @@
     .pill.active,.pill:hover{background:var(--moss);border-color:var(--moss);color:var(--white);}
 
     /* HERBS GRID */
-    #herbsSection{padding:4rem 3rem 6rem;}
-    .herbs-wrap{max-width:1100px;margin:0 auto;}
-    .herbs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.6rem;}
+    #herbsSection{padding:5rem 3rem 6rem;}
+    .herbs-wrap{max-width:1200px;margin:0 auto;width: 100%;}
+    .herbs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,350px));gap:1.6rem;justify-content: center;}
     .herb-card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid rgba(185,196,155,0.3);transition:transform 0.3s,box-shadow 0.3s;cursor:pointer;animation:fadeUp 0.5s ease forwards;}
     .herb-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(30,58,26,0.1);}
     .herb-header{padding:1.8rem;display:flex;align-items:center;gap:1.2rem;}

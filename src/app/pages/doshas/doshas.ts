@@ -102,6 +102,8 @@ export class DoshasComponent {
       name: 'Vata',
       icon: '🌬️',
       class: 'vata',
+      bg: '#eef7ff',
+      color: '#2563eb',
       element: 'Air + Space · Movement Energy',
       desc: 'Vata governs all movement in the body — nerve impulses, breathing, circulation, and thoughts.',
       traits: {
@@ -115,6 +117,8 @@ export class DoshasComponent {
       name: 'Pitta',
       icon: '🔥',
       class: 'pitta',
+      bg: '#fff4e6',
+      color: '#ea580c',
       element: 'Fire + Water · Transformation Energy',
       desc: 'Pitta governs digestion, metabolism, and transformation of experiences into knowledge.',
       traits: {
@@ -128,6 +132,8 @@ export class DoshasComponent {
       name: 'Kapha',
       icon: '🌊',
       class: 'kapha',
+      bg: '#ecfdf5',
+      color: '#059669',
       element: 'Earth + Water · Structure Energy',
       desc: 'Kapha governs structure, tissues, lubrication, and stability in the body.',
       traits: {
@@ -175,6 +181,28 @@ export class DoshasComponent {
   calculateResult() {
     const counts: any = { V: 0, P: 0, K: 0 };
 
+    this.answers.forEach(a => counts[a]++);
+
+    const primaryKey = Object.keys(counts).reduce(
+      (a, b) => counts[a] > counts[b] ? a : b
+    );
+
+    const doshaMap: any = {
+      V: 'vata',
+      P: 'pitta',
+      K: 'kapha'
+    };
+
+    const selectedDosha = this.doshas.find(
+      d => d.class === doshaMap[primaryKey]
+    );
+
+    if (!selectedDosha) {
+      console.error('Dosha mapping failed');
+      return;
+    }
+
+    this.primaryDosha = selectedDosha;
     this.answers.forEach((a) => counts[a]++);
 
     const primaryKey = Object.keys(counts).reduce((a, b) => (counts[a] > counts[b] ? a : b));

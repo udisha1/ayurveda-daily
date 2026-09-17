@@ -2,11 +2,16 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar';
 import { FooterComponent } from './components/footer/footer';
+import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, FooterComponent],
+  // IMPORTS array mein Navbar aur Footer zaroor daalein
+  imports: [RouterOutlet,
+    NavbarComponent,
+    FooterComponent,
+    ScrollToTopComponent],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

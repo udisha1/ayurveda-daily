@@ -1,5 +1,7 @@
 :root{--forest:#1E3A1A;--moss:#2D5A27;--sage:#6B8F47;--fern:#A3B87A;--mint:#D7E9C0;--cream:#F6EDD9;--parchment:#EFE3C6;--sand:#D9C49A;--clay:#B5723A;--turmeric:#D4930F;--bark:#5C3317;--white:#FFFDF7;--font-display:'Playfair Display',serif;--font-body:'Cormorant Garamond',serif;--font-ui:'Nunito Sans',sans-serif;}
-
+.section {
+  margin-top: 40px;
+}
 /* Center everything + consistent mobile padding */
 .about-main{display:block;}
 .about-wrap{max-width:900px;margin:0 auto;}

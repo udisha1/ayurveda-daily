@@ -220,22 +220,294 @@ export const REMEDIES: Remedy[] = [
     time: '3 min',
     doshas: ['V', 'K']
   },
+
   {
-  cat: 'stress',
-  icon: '🧘',
-  bg: '#FFF0F5',
-  banner: '#E91E63',
-  cat_label: 'Stress Relief',
-  title: 'Warm Saffron Milk',
-  desc: 'Calms mind and improves relaxation.',
-  steps: [
-    'Heat milk',
-    'Add saffron strands',
-    'Mix a little honey',
-    'Drink before sleep'
-  ],
-  efficacy: 4,
-  time: '5 min',
-  doshas: ['V', 'P']
-}
+    cat: 'skin',
+    icon: '🌸',
+    bg: '#fff8e6',
+    banner: '#D4930F',
+    cat_label: 'Skin Health',
+    title: 'Rice Water Toner',
+    desc: 'Boosts skin radiance.',
+    steps: [
+      'Take a cup of rice and rinse well',
+      'Put it in a jar or a bottle and add 2 cups of water',
+      'Let it sit for a day',
+      'Add the water in spray bottle and use as toner',
+    ],
+    efficacy: 5,
+    time: '8 min',
+    doshas: ['V', 'K']
+  },
+    {
+    cat: 'skin',
+    icon: '🌸',
+    bg: '#fce8d5',
+    banner: '#C4622D',
+    cat_label: 'Skin Health',
+    title: 'Roasted Turmeric & Honey Face Pack',
+    desc: 'Brightens skin and reduces pigmentation.',
+    steps: [
+      'Dry roast turmeric powder until fragrant', 
+      'Let it cool and mix with honey to form a paste',
+      'Apply on face',
+      'Leave for 20 minutes',
+      'Rinse with warm water'
+    ],
+    efficacy: 5,
+    time: '25 min',
+    doshas: ['P', 'K']
+  },
+
+    {
+    cat: 'skin',
+    icon: '🌸',
+    bg: '#fce8d5',
+    banner: '#C4622D',
+    cat_label: 'Skin Health',
+    title: 'Rice flour pack',
+    desc: 'Exfoliates and brightens skin.',
+    steps: [
+      'Mix rice flour with rose water to form a paste',
+      'Apply on face',
+      'Leave for 20 minutes',
+      'Rinse with cold water while softly rubbing in circular motions'
+    ],
+    efficacy: 5,
+    time: '25 min',
+    doshas: ['P', 'K']
+  },
+   {
+    cat: 'skin',
+    icon: '🌸',
+    bg: '#fce8d5',
+    banner: '#C4622D',
+    cat_label: 'Skin Health',
+    title: 'Rose Water & Sandalwood Face Pack',
+    desc: ' Soothes skin and reduces redness.',
+    steps: [
+      ' Mix sandalwood powder with rose water to form a paste',
+      'Apply on face',
+      'Leave for 20 minutes',
+      'Rinse with cool water'
+    ],
+    efficacy: 4,
+    time: '20 min',
+    doshas: ['P', 'K']
+  },
+  {
+    cat: 'joints',
+    icon: '🦴',
+    bg: '#e8f4e1',
+    banner: '#6B8F47',
+    cat_label: 'Joint Health',
+    title: 'Flaxseeds & Turmeric Drink',
+    desc: 'Reduces joint pain and improves health.',
+    steps: [
+      'Mix turmeric + milk',
+      'Add flaxseeds powder',
+      'Drink daily after meals'
+    ],
+    efficacy: 4,
+    time: '5 min',
+    doshas: ['P', 'K']
+  },
+  {
+    cat: 'joints',
+    icon: '🦴',
+    bg: '#e8f4e1',
+    banner: '#6B8F47',
+    cat_label: 'Joint Health',
+    title: 'Kongu Vathal (Dry Ginger) Drink',
+    desc: 'Reduces joint pain and improves health.',
+    steps: [
+      'Mix dry ginger powder with warm water',
+      'Add honey and lemon juice',
+      'Drink daily after meals'
+    ],
+    efficacy: 4,
+    time: '9 min',
+    doshas: ['P', 'K']
+  },
+   {
+    cat: 'joints',
+    icon: '🦴',
+    bg: '#e8f4e1',
+    banner: '#6B8F47',
+    cat_label: 'Joint Health',
+    title: 'Kongu Vathal (Dry Ginger) Drink',
+    desc: 'Reduces joint pain and improves health.',
+    steps: [
+      'Mix dry ginger powder with warm water',
+      'Add honey and lemon juice',
+      'Drink daily after meals'
+    ],
+    efficacy: 4,
+    time: '9 min',
+    doshas: ['P', 'K']
+  },
+  {
+    cat: 'hair',
+    icon: '💆',
+    bg: '#e8f4e1',
+    banner: '#6B8F47',
+    cat_label: 'Hair Health',
+    title: 'Fenugreek Hair Mask',
+    desc: 'Prevents hair fall and softens hair.',
+    steps: [
+      'Take 2 tbsp fenugreek seeds and soak overnight',
+      'Mix the soaked seeds into a paste',
+      'Leave for 1 hour',
+      'Wash'
+    ],
+    efficacy: 5,
+    time: '15 min',
+    doshas: ['V', 'P']
+  },
+  {
+    cat: 'hair',
+    icon: '💆',
+    bg: '#e8f4e1',
+    banner: '#6B8F47',
+    cat_label: 'Hair Health',
+    title: 'Aloevera & Coconut Oil Hair Mask',
+    desc: 'Nourishes scalp and promotes hair growth.',
+    steps: [
+      'Mix fresh aloevera gel with coconut oil',
+      'Massage into scalp',
+      'Leave for 1 hour',
+      'Wash'
+    ],
+    efficacy: 5,
+    time: '15 min',
+    doshas: ['V', 'P']
+  },
+  {
+    cat: 'hair',
+    icon: '💆',
+    bg: '#e8f4e1',
+    banner: '#6B8F47',
+    cat_label: 'Hair Health',
+    title: 'Curry Leaves & Coconut Oil Hair Mask',
+    desc: 'Strengthens hair and prevents graying.',
+    steps: [
+      'Dry roast curry leaves and grind into powder',
+      'Mix with coconut oil',
+      'Massage into scalp',
+      'Leave for 1 hour',
+      'Wash'
+    ],
+    efficacy: 5,
+    time: '15 min',
+    doshas: ['V', 'P']
+  },
+  {
+    cat: 'energy',
+    icon: '⚡',
+    bg: '#fff8e6',
+    banner: '#D4930F',
+    cat_label: 'Energy',
+    title: 'Maca Root Energy Drink',
+    desc: 'Boosts energy and stamina naturally.',
+    steps: [
+      'Mix maca root powder',
+      'Add warm water or milk',
+      'Add honey or maple syrup',
+      'Drink in the morning or before workouts'
+    ],
+    efficacy: 5,
+    time: '8 min',
+    doshas: ['V', 'K']
+  },
+ {
+    cat: 'sleep',
+    icon: '🌙',
+    bg: '#eae0f5',
+    banner: '#5C3317',
+    cat_label: 'Sleep',
+    title: 'Saffron & Almond Sleep Elixir',
+    desc: 'Promotes deep sleep and relaxation.',
+    steps: [
+      'Warm milk',
+      'Add saffron',
+      'Add almond powder and honey',
+      'Drink before bed'
+    ],
+    efficacy: 5,
+    time: '7 min',
+    doshas: ['V']
+  },
+  {
+    cat: 'immunity',
+    icon: '🌟',
+    bg: '#fef9e6',
+    banner: '#D4930F',
+    cat_label: 'Immunity',
+    title: 'Yogurt & Turmeric Immunity Booster',
+    desc: 'Supports gut health and immunity.',
+    steps: [
+      'Mix yogurt with turmeric',
+      'Add a pinch of black pepper',
+      'Add honey and lemon juice',
+      'Eat daily as a snack or with meals'
+    ],
+    efficacy: 3,
+    time: '10 min',
+    doshas: ['V', 'K']
+  },
+  {
+    cat: 'stress',
+    icon: '🌿',
+    bg: '#e8f4e1',
+    banner: '#2D5A27',
+    cat_label: 'Stress & Anxiety',
+    title: 'Holy Basil (Tulsi) Tea',
+    desc: 'The sacred herb that calms the mind and reduces stress.',
+    steps: [
+      'Boil water with fresh or dried tulsi leaves',  
+      'Add a slice of ginger and a pinch of black pepper',
+      'Simmer for 10 minutes, strain well',
+      'Sip slowly in the evening or before bed'
+    ],
+    efficacy: 4,
+    time: '10 min',
+    doshas: ['V', 'K']
+  },
+  {
+    cat: 'stress',
+    icon: '🌿',
+    bg: '#e8f4e1',
+    banner: '#2D5A27',
+    cat_label: 'Stress & Anxiety',
+    title: 'Jasmine & Chamomile Relaxation Tea',
+    desc: 'A soothing blend that eases anxiety and promotes restful sleep.',
+    steps: [
+      'Boil water and add jasmine flowers and chamomile',
+      'Add a pinch of cardamom for extra relaxation',
+      'Simmer for 7 minutes, strain well',
+      'Sip slowly in the evening or before bed'
+    ],
+    efficacy: 4,
+    time: '10 min',
+    doshas: ['V', 'K']
+  },
+  {
+    cat: 'stress',
+    icon: '🌿',
+    bg: '#e8f4e1',
+    banner: '#2D5A27',
+    cat_label: 'Stress & Anxiety',
+    title: 'Brahmi (Gotu Kola) Brain Tonic',
+    desc: 'The brain tonic that enhances mental clarity and reduces stress.',
+    steps: [
+      'Boil water and add fresh or dried brahmi leaves',
+      'Add a pinch of ashwagandha for extra stress relief',
+      'Simmer for 10 minutes, strain well',
+      'Sip slowly in the evening or before bed'
+    ],
+    efficacy: 5,
+    time: '15 min',
+    doshas: ['V', 'K']
+  }
 ];
+

@@ -219,3 +219,22 @@
       .timeline-item { grid-template-columns: 70px 1fr; }
       .timeline-dot { left: 61px; }
     }
+
+.healing-controls {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.healing-audio {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--mint);
+}
+
+.healing-audio audio {
+  margin-top: 1rem;
+  width: min(400px, 90%);
+}

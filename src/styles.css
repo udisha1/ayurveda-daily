@@ -30,8 +30,34 @@ body {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+body.healing-mode {
+  background: #f7faf5;
+  filter: saturate(0.9);
+}
 
-/* Common Breadcrumb & Hero utilities can go here too */
+body.healing-mode * {
+  transition: all 0.5s ease;
+}
+
+body.healing-mode #hero {
+  animation: healingGlow 6s infinite ease-in-out;
+}
+
+body.healing-mode .hero-content {
+  animation: calmPulse 4s infinite ease-in-out;
+}
+
+@keyframes calmPulse {
+  0% { opacity: 0.95; }
+  50% { opacity: 1; }
+  100% { opacity: 0.95; }
+}
+
+@keyframes healingGlow {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.08); }
+  100% { filter: brightness(1); }
+}
 
 /* ================= DARK MODE ================= */
 

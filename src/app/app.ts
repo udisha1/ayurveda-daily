@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-// Niche wali 2 lines add karein (path apne folder ke hisaab se check kar lein)
-import { NavbarComponent } from './components/navbar/navbar'; 
+import { NavbarComponent } from './components/navbar/navbar';
 import { FooterComponent } from './components/footer/footer';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top';
 
